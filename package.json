@@ -1,0 +1,13 @@
+{
+  "name": "anestpro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "format": "prettier --write \"**/*.{html,css,js,svg}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,svg}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}

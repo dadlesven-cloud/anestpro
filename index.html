@@ -1,262 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AnestPro</title>
-  <meta name="description" content="AnestPro — анестезіологічний супровід під ключ для стоматологічних клінік та медичних центрів. Ліцензія МОЗ України.">
-  <meta name="keywords" content="анестезіологія, седація, наркоз, стоматологія, медичне обладнання">
-  <meta name="author" content="AnestPro">
-  <meta property="og:title" content="AnestPro — анестезіологічний супровід під ключ">
-  <meta property="og:description" content="Професійна анестезіологічна служба для клінік. Ліцензія МОЗ, сучасне обладнання.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://anestpro.org">
-<link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="AnestPro" />
-<link rel="manifest" href="/site.webmanifest" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnestPro</title>
+    <meta
+      name="description"
+      content="AnestPro — анестезіологічний супровід під ключ для стоматологічних клінік та медичних центрів. Ліцензія МОЗ України."
+    />
+    <meta name="keywords" content="анестезіологія, седація, наркоз, стоматологія, медичне обладнання" />
+    <meta name="author" content="AnestPro" />
+    <meta property="og:title" content="AnestPro — анестезіологічний супровід під ключ" />
+    <meta
+      property="og:description"
+      content="Професійна анестезіологічна служба для клінік. Ліцензія МОЗ, сучасне обладнання."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anestpro.org" />
+    <meta property="og:image" content="https://anestpro.org/images/LogotypeSVG.svg" />
+    <meta property="og:image:width" content="199" />
+    <meta property="og:image:height" content="52" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AnestPro — анестезіологічний супровід під ключ" />
+    <meta
+      name="twitter:description"
+      content="Професійна анестезіологічна служба для клінік. Ліцензія МОЗ, сучасне обладнання."
+    />
+    <meta name="twitter:image" content="https://anestpro.org/images/LogotypeSVG.svg" />
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="AnestPro" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="uk" />
+    <meta name="geo.region" content="UA" />
+    <meta name="geo.placename" content="Україна" />
+    <meta name="geo.position" content="50.4501;30.5234" />
+    <meta name="ICBM" content="50.4501, 30.5234" />
+    <link rel="canonical" href="https://anestpro.org" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="header">
-    <div class="container header-wrap">
-      <a href="#" class="logo">
-        <img src="images/Logotype.png" alt="AnestPro Logo" width="199" height="52">
-      </a>
-      <div class="menu-block">
-        <span class="menu-text">Меню</span>
-        <button class="burger" aria-label="Меню">
-          <svg class="icon icon-burger" width="28" height="22">
-            <use href="images/icons.svg#icon-burger"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="hero" class="hero">
-      <div class="container hero-wrap">
-        <h1 class="hero-title">AnestPro</h1>
-        <p class="hero-subtitle">Анестезіологія<br> під ключ</p>
-
-        <div class="hero-description">
-          <div class="hero-description-item">
-            <svg class="hero-icon" width="24" height="24">
-              <use href="images/icons.svg#check-circle"></use>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-wrap">
+        <div>
+          <a href="#" class="logo">
+            <img src="images/LogotypeSVG.svg" alt="AnestPro Logo" />
+          </a>
+        </div>
+        <div class="menu-block">
+          <span class="menu-text">Меню</span>
+          <button class="burger" aria-label="Меню">
+            <svg class="icon icon-burger" width="28" height="22">
+              <use href="images/icons.svg#icon-burger"></use>
             </svg>
-            <span>Ліцензія МОЗ України</span>
-          </div>
-          <div class="hero-description-item">
-            <svg class="hero-icon" width="24" height="24">
-              <use href="images/icons.svg#check-circle"></use>
-            </svg>
-            <span>Повний цикл анестезіологічного забезпечення</span>
-          </div>
-        </div>
-
-        <a href="#" class="hero-button open-modal-btn">
-          <span class="btn-text">Дізнатись деталі</span>
-          <svg class="btn-icon" width="33" height="32">
-            <use href="images/icons.svg#icon-arrow"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="hero-arrow">
-        <svg width="24" height="24" viewBox="0 0 20 12">
-          <use href="images/icons.svg#icon-arrow-down"></use>
-        </svg>
-      </div>
-    
-    </section>
-
-    <section id="" class="partners">
-
-      <div class="partners-wave">
-        <svg viewBox="0 0 2000 350" preserveAspectRatio="none">
-          <path d="M-100 150L2100 0L2200 200L0 350L-100 150Z" fill="#006c83" fill-opacity="1"/>
-        </svg>
-      </div>
-
-      <div class="container partners-wrapper">
-        <div class="partners-left">
-          <h2 class="partners-title">Ми працюємо <br> з такими закладами:</h2>
-        </div>
-    
-        <div class="partners-right">
-          <ul class="partners-list">
-            <li class="partners-col">
-              <ul class="partners-inner-list">
-                <li class="partners-item">
-                  <svg class="partners-icon" width="45" height="48">
-                    <use href="images/icons.svg#icon-dental"></use>
-                  </svg>
-                  <span>Стоматологічні клініки</span>
-                </li>
-                <li class="partners-divider">
-                  <svg width="160" height="2" viewBox="0 0 160 2">
-                    <path d="M1 1H159" stroke="rgba(0, 108, 131, 0.5)" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </li>
-                <li class="partners-item">
-                  <svg class="partners-icon" width="49" height="49">
-                    <use href="images/icons.svg#icon-endoscope"></use>
-                  </svg>
-                  <span>Ендоскопічні кабінети</span>
-                </li>
-                <li class="partners-divider">
-                  <svg width="160" height="2" viewBox="0 0 160 2">
-                    <path d="M1 1H159" stroke="rgba(0, 108, 131, 0.5)" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </li>
-                <li class="partners-item">
-                  <svg class="partners-icon" width="52" height="52">
-                    <use href="images/icons.svg#icon-plastic"></use>
-                  </svg>
-                  <span>Клініки пластичної та естетичної хірургії</span>
-                </li>
-              </ul>
-            </li>
-            <li class="partners-col">
-              <ul class="partners-inner-list">
-                <li class="partners-item">
-                  <svg class="partners-icon" width="56" height="40">
-                    <use href="images/icons.svg#icon-private"></use>
-                  </svg>
-                  <span>Приватні медичні центри та клініки</span>
-                </li>
-                <li class="partners-divider">
-                  <svg width="160" height="2" viewBox="0 0 160 2">
-                    <path d="M1 1H159" stroke="rgba(0, 108, 131, 0.5)" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </li>
-                <li class="partners-item">
-                  <svg class="partners-icon" width="54" height="45">
-                    <use href="images/icons.svg#icon-ambulatory"></use>
-                  </svg>
-                  <span>Амбулаторії та денні стаціонари</span>
-                </li>
-                <li class="partners-divider">
-                  <svg width="160" height="2" viewBox="0 0 160 2">
-                    <path d="M1 1H159" stroke="rgba(0, 108, 131, 0.5)" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </li>
-                <li class="partners-item">
-                  <svg class="partners-icon" width="49" height="47">
-                    <use href="images/icons.svg#icon-education"></use>
-                  </svg>
-                  <span>Медичні<br>навчальні<br>заклади</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          </button>
         </div>
       </div>
-    
-      <div class="partners-image-wrapper">
-        <img src="images/partners-bg.jpg" alt="Partners background" class="partners-image desktop-img">
-        <img src="images/partners-mobile.jpg" alt="Partners background mobile" class="partners-image mobile-img">
-      </div>
-    </section>
-    <section id="services" class="services" aria-labelledby="services-heading">
-      <div class="container services-header">
-        <h2 id="services-heading" class="services-title">Послуги, які ми надаємо</h2>
-        <div class="services-desc">
-          <p class="services-text">
-            Повний спектр анестезіологічного супроводу — від виїзної бригади до навчання та оснащення клінік. Забезпечуємо надійність, комфорт і ефективність на кожному етапі.
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-wrap">
+          <h1 class="hero-title">AnestPro</h1>
+          <p class="hero-subtitle">
+            Анестезіологія<br />
+            під ключ
           </p>
-          <svg class="services-line" width="162" height="2" viewBox="0 0 162 2" fill="none" aria-hidden="true">
-            <path d="M1 1H81H161" stroke="#006C83" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+
+          <div class="hero-description">
+            <div class="hero-description-item">
+              <svg class="hero-icon" width="24" height="24">
+                <use href="images/icons.svg#check-circle"></use>
+              </svg>
+              <span>Ліцензія МОЗ України</span>
+            </div>
+            <div class="hero-description-item">
+              <svg class="hero-icon" width="24" height="24">
+                <use href="images/icons.svg#check-circle"></use>
+              </svg>
+              <span>Повний цикл анестезіологічного забезпечення</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="hero-button open-modal-btn">
+            <span class="btn-text">Дізнатись деталі</span>
+            <svg class="btn-icon" width="33" height="32">
+              <use href="images/icons.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="hero-arrow">
+          <svg width="24" height="24" viewBox="0 0 20 12">
+            <use href="images/icons.svg#icon-arrow-down"></use>
           </svg>
         </div>
-      </div>
-    
-      <div class="container">
-        <ul class="services-slider" aria-label="Список послуг">
-          <!-- Карточка 1 -->
-          <li class="service-card">
-            <article class="card-article">
-              <div class="card-top">
-                <h3 class="card-title">Анестезіологічний супровід</h3>
-                <p class="partner-card-text">"Анестезія під ключ" — команда приїжджає до клініки з усім необхідним (обладнання, медикаменти, комплект для седації чи наркозу).</p>
-              </div>
-              <div class="card-bottom">
-                <img class="card-image" src="images/service1.png" alt="" aria-hidden="true">
-                <button class="card-arrow open-modal-btn" aria-label="Детальніше про анестезіологічний супровід">
-                  <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
-                    <use href="images/icons.svg#icon-arrow"></use>
-                  </svg>
-                </button>
-              </div>
-            </article>
-          </li>
-    
-          <!-- Карточка 2 (partner-card) -->
-          <li class="service-card partner-card">
-            <article class="card-article">
-              <div class="card-top">
-                <h3 class="card-title">Організація анестезіологічної служби</h3>
-                <p class="partner-card-text">Повне налаштування процесів у клініці — від підбору обладнання до формування команди.</p>
-              </div>
-              <div class="card-bottom">
-                <img class="card-image" src="images/service2.png" alt="" aria-hidden="true">
-                <button class="card-arrow open-modal-btn" aria-label="Детальніше про медичне обладнання">
-                  <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
-                    <use href="images/icons.svg#icon-arrow"></use>
-                  </svg>
-                </button>
-              </div>
-            </article>
-          </li>
-    
-          <!-- Карточка 3 -->
-          <li class="service-card">
-            <article class="card-article">
-              <div class="card-top">
-                <h3 class="card-title">Стажування для анестезіологів</h3>
-                <p class="partner-card-text">Живий досвід анестезіології у стоматології. Спостереження, практика, розбір реальних кейсів.</p>
-              </div>
-              <div class="card-bottom">
-                <img class="card-image" src="images/service3.png" alt="" aria-hidden="true">
-                <button class="card-arrow open-modal-btn" aria-label="Детальніше про навчання персоналу">
-                  <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
-                    <use href="images/icons.svg#icon-arrow"></use>
-                  </svg>
-                </button>
-              </div>
-            </article>
-          </li>
-    
-          <!-- Карточка 4 (partner-card) -->
-          <li class="service-card partner-card">
-            <article class="card-article">
-              <div class="card-top">
-                <h3 class="card-title">Курси по невідкладним станам</h3>
-                <p class="partner-card-text">Виїзне навчання з теоретичним матеріалом та відпрацюванням практичних навичок. Розбір клінічних випадків.</p>
-              </div>
-              <div class="card-bottom">
-                <img class="card-image" src="images/service4.png" alt="" aria-hidden="true">
-                <button class="card-arrow open-modal-btn" aria-label="Детальніше про юридичний супровід">
-                  <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
-                    <use href="images/icons.svg#icon-arrow"></use>
-                  </svg>
-                </button>
-              </div>
-            </article>
-          </li>
-    
-          <!-- Карточка 5 -->
-          <li class="service-card">
-            <article class="card-article">
-              <div class="card-top">
-                <h3 class="card-title">Продаж обладнання</h3>
-                <p class="partner-card-text">Підбір нового або 
-                  б/в обладнання з повним супроводом:
+      </section>
+
+      <section id="partners" class="partners">
+        <div class="partners-wave">
+          <svg viewBox="0 0 2000 350" preserveAspectRatio="none">
+            <path d="M-100 150L2100 0L2200 200L0 350L-100 150Z" fill="#006c83" fill-opacity="1" />
+          </svg>
+        </div>
+
+        <div class="container partners-wrapper">
+          <div class="partners-left">
+            <h2 class="partners-title">
+              Ми працюємо <br />
+              з такими закладами:
+            </h2>
+          </div>
+
+          <div class="partners-right">
+            <ul class="partners-list">
+              <li class="partners-col">
+                <ul class="partners-inner-list">
+                  <li class="partners-item">
+                    <svg class="partners-icon" width="45" height="48">
+                      <use href="images/icons.svg#icon-dental"></use>
+                    </svg>
+                    <span>Стоматологічні клініки</span>
+                  </li>
+                  <li class="partners-divider">
+                    <svg width="160" height="2" viewBox="0 0 160 2">
+                      <path d="M1 1H159" stroke="rgba(0, 108, 131, 0.5)" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </li>
+                  <li class="partners-item">
+                    <svg class="partners-icon" width="49" height="49">
+                      <use href="images/icons.svg#icon-endoscope"></use>
+                    </svg>
+                    <span>Ендоскопічні кабінети</span>
+                  </li>
+                  <li class="partners-divider">
+                    <svg width="160" height="2" viewBox="0 0 160 2">
+                      <path d="M1 1H159" stroke="rgba(0, 108, 131, 0.5)" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </li>
+                  <li class="partners-item">
+                    <svg class="partners-icon" width="52" height="52">
+                      <use href="images/icons.svg#icon-plastic"></use>
+                    </svg>
+                    <span>Клініки пластичної та естетичної хірургії</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="partners-col">
+                <ul class="partners-inner-list">
+                  <li class="partners-item">
+                    <svg class="partners-icon" width="56" height="40">
+                      <use href="images/icons.svg#icon-private"></use>
+                    </svg>
+                    <span>Приватні медичні центри та клініки</span>
+                  </li>
+                  <li class="partners-divider">
+                    <svg width="160" height="2" viewBox="0 0 160 2">
+                      <path d="M1 1H159" stroke="rgba(0, 108, 131, 0.5)" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </li>
+                  <li class="partners-item">
+                    <svg class="partners-icon" width="54" height="45">
+                      <use href="images/icons.svg#icon-ambulatory"></use>
+                    </svg>
+                    <span>Амбулаторії та денні стаціонари</span>
+                  </li>
+                  <li class="partners-divider">
+                    <svg width="160" height="2" viewBox="0 0 160 2">
+                      <path d="M1 1H159" stroke="rgba(0, 108, 131, 0.5)" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </li>
+                  <li class="partners-item">
+                    <svg class="partners-icon" width="49" height="47">
+                      <use href="images/icons.svg#icon-education"></use>
+                    </svg>
+                    <span>Медичні<br />навчальні<br />заклади</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="partners-image-wrapper">
+          <img
+            src="images/partners-bg.jpg"
+            alt="Фон секції партнерів"
+            class="partners-image desktop-img"
+            loading="lazy"
+          />
+          <img
+            src="images/partners-mobile.jpg"
+            alt="Фон секції партнерів для мобільних пристроїв"
+            class="partners-image mobile-img"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <section id="services" class="services" aria-labelledby="services-heading">
+        <div class="container services-header">
+          <h2 id="services-heading" class="services-title">Послуги, які ми надаємо</h2>
+          <div class="services-desc">
+            <p class="services-text">
+              Повний спектр анестезіологічного супроводу — від виїзної бригади до навчання та оснащення клінік.
+              Забезпечуємо надійність, комфорт і ефективність на кожному етапі.
+            </p>
+            <svg class="services-line" width="162" height="2" viewBox="0 0 162 2" fill="none" aria-hidden="true">
+              <path d="M1 1H81H161" stroke="#006C83" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="container">
+          <ul class="services-slider" aria-label="Список послуг">
+            <!-- Карточка 1 -->
+            <li class="service-card">
+              <article class="card-article">
+                <div class="card-top">
+                  <h3 class="card-title">Анестезіологічний супровід</h3>
+                  <p class="partner-card-text">
+                    "Анестезія під ключ" — команда приїжджає до клініки з усім необхідним (обладнання, медикаменти,
+                    комплект для седації чи наркозу).
                   </p>
+                </div>
+                <div class="card-bottom">
+                  <img class="card-image" src="images/service1.png" alt="Анестезіологічний супровід" loading="lazy" />
+                  <button class="card-arrow open-modal-btn" aria-label="Детальніше про анестезіологічний супровід">
+                    <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
+                      <use href="images/icons.svg#icon-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+
+            <!-- Карточка 2 (partner-card) -->
+            <li class="service-card partner-card">
+              <article class="card-article">
+                <div class="card-top">
+                  <h3 class="card-title">Організація анестезіологічної служби</h3>
+                  <p class="partner-card-text">
+                    Повне налаштування процесів у клініці — від підбору обладнання до формування команди.
+                  </p>
+                </div>
+                <div class="card-bottom">
+                  <img
+                    class="card-image"
+                    src="images/service2.png"
+                    alt="Організація анестезіологічної служби"
+                    loading="lazy"
+                  />
+                  <button class="card-arrow open-modal-btn" aria-label="Детальніше про медичне обладнання">
+                    <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
+                      <use href="images/icons.svg#icon-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+
+            <!-- Карточка 3 -->
+            <li class="service-card">
+              <article class="card-article">
+                <div class="card-top">
+                  <h3 class="card-title">Стажування для анестезіологів</h3>
+                  <p class="partner-card-text">
+                    Живий досвід анестезіології у стоматології. Спостереження, практика, розбір реальних кейсів.
+                  </p>
+                </div>
+                <div class="card-bottom">
+                  <img
+                    class="card-image"
+                    src="images/service3.png"
+                    alt="Стажування для анестезіологів"
+                    loading="lazy"
+                  />
+                  <button class="card-arrow open-modal-btn" aria-label="Детальніше про навчання персоналу">
+                    <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
+                      <use href="images/icons.svg#icon-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+
+            <!-- Карточка 4 (partner-card) -->
+            <li class="service-card partner-card">
+              <article class="card-article">
+                <div class="card-top">
+                  <h3 class="card-title">Курси по невідкладним станам</h3>
+                  <p class="partner-card-text">
+                    Виїзне навчання з теоретичним матеріалом та відпрацюванням практичних навичок. Розбір клінічних
+                    випадків.
+                  </p>
+                </div>
+                <div class="card-bottom">
+                  <img class="card-image" src="images/service4.png" alt="Курси по невідкладним станам" loading="lazy" />
+                  <button class="card-arrow open-modal-btn" aria-label="Детальніше про юридичний супровід">
+                    <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
+                      <use href="images/icons.svg#icon-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+
+            <!-- Карточка 5 -->
+            <li class="service-card">
+              <article class="card-article">
+                <div class="card-top">
+                  <h3 class="card-title">Продаж обладнання</h3>
+                  <p class="partner-card-text">Підбір нового або б/в обладнання з повним супроводом:</p>
                   <ul class="partner-dots">
                     <li>Наркозно-дихальне обладнання</li>
                     <li>Монітори пацієнта</li>
@@ -265,625 +324,811 @@
                     <li>BIS-монітори</li>
                     <li>Відеоларингоскопи</li>
                   </ul>
-              </div>
-              <div class="card-bottom">
-                <img class="card-image" src="images/service5.png" alt="" aria-hidden="true">
-                <button class="card-arrow open-modal-btn" aria-label="Детальніше про екстрені виклики">
-                  <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
-                    <use href="images/icons.svg#icon-arrow"></use>
-                  </svg>
-                </button>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="why-us" class="why-section">
-
-      <div class="partners-wave mobile-wave">
-        <svg viewBox="0 0 2000 350" preserveAspectRatio="none">
-          <path d="M-100 150L2100 0L2200 200L0 350L-100 150Z" fill="#006c83" fill-opacity="1"/>
-        </svg>
-      </div>
-
-      <div class="container why-header">
-        <h2 class="why-title">Чому нас<br>обирають?</h2>
-          <div class="services-desc why-desc">
-            <p class="why-description">
-              Ми — більше, ніж просто анестезіологи. Гарантуємо безпеку, комфорт і чітку організацію кожного етапу. Працюємо офіційно, сучасно й завжди на стороні пацієнта та клініки.
-            </p>
-            <svg class="services-line" width="162" height="2" viewBox="0 0 162 2" fill="none">
-              <path d="M1 1H81H161" stroke="#006C83" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-
-      </div>
-    
-      <div class="container cards-container">
-        <div class="card">
-          <div class="card-content">
-            <img src="images/why1.svg" alt="icon" class="card-icon" />
-            <div class="card-text">
-              <h3>Готова анестезіологічна бригада</h3>
-              <p>У потрібний день і час—досвідчена команда прибуде до вашої клініки.</p>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Копии карточек -->
-        <div class="card">
-          <div class="card-content">
-            <img src="images/why2.svg" alt="icon" class="card-icon" />
-            <div class="card-text">
-              <h3>Юридична відповідність</h3>
-              <p>Ліцензія МОЗ України. Офіційна співпраця та відповідність усім вимогам</p>
-            </div>
-          </div>
-        </div>
-    
-        <div class="card">
-          <div class="card-content">
-            <img src="images/why3.svg" alt="icon" class="card-icon" />
-            <div class="card-text">
-              <h3>Комплексне забезпечення</h3>
-              <p>Сучасне обладнання, сертифіковані медикаменти та витратні матеріали — все під контролем.</p>
-            </div>
-          </div>
-        </div>
-    
-        <div class="card">
-          <div class="card-content">
-            <img src="images/why4.svg" alt="icon" class="card-icon" />
-            <div class="card-text">
-              <h3>Модернізація служби</h3>
-              <p>Допомагаємо розвивати й налаштовувати ефективну анестезіологічну службу у вашій клініці.</p>
-            </div>
-          </div>
-        </div>
-    
-        <div class="card">
-          <div class="card-content">
-            <img src="images/why5.svg" alt="icon" class="card-icon" />
-            <div class="card-text">
-              <h3>Якість та професіоналізм</h3>
-              <p>Працюємо за міжнародними стандартами. Комфорт і безпека пацієнтів — наш пріоритет.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="#" class="hero-button why-btn open-modal-btn">
-        <span class="btn-text">Дізнатись деталі</span>
-        <svg class="btn-icon" width="33" height="32">
-          <use href="images/icons.svg#icon-arrow"></use>
-        </svg>
-      </a>
-    </section>
-
-    <section id="team" class="team-section">
-      <div class="team-container">
-        <!-- Блок с текстом -->
-        <div class="team-text-block">
-          <h2 class="team-title">Ми - команда професіоналів</h2>
-          <p class="team-description">Досвідчена команда анестезіологів для стоматологічних клінік і медичних установ.</p>
-          <svg width="162" height="2" viewBox="0 0 162 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1H81H161" stroke="#FAFAFA" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
-          </svg>
-        </div>
-        
-        <!-- Блок с фото и лого -->
-        <div class="team-image-block">
-          <div class="team-photo">
-            <img src="images/phototeam1.png" alt="Фото команди професіоналів" class="team-photo">
-          </div>
-          <div class="team-logo">
-            <a href="#" class="logo">
-              <img src="images/Logotype.png" alt="AnestPro Logo" width="199" height="52">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-      <div class="container testimonials-header">
-        <h2 class="testimonials-title">Про нас говорять</h2>
-        <div class="services-desc">
-          <p class="testimonials-text">
-            Ми цінуємо довіру кожного, хто обирає AnestPro. Саме тому докладаємо максимум зусиль, щоб забезпечити найвищий рівень безпеки, комфорту та професіоналізму.
-          </p>
-          <svg class="services-line" width="162" height="2" viewBox="0 0 162 2" fill="none" aria-hidden="true">
-            <path d="M1 1H81H161" stroke="#006C83" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </div>
-    
-      <div class="container">
-        <div class="testimonials-carousel">
-          <!-- Карточка 1 -->
-          <article class="testimonial-card">
-            <div class="testimonial-content">
-              <div class="stars">
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-              </div>
-              <blockquote class="testimonial-text">
-                Відмінна команда професіоналів! Ми співпрацюємо вже кілька років, і вони завжди надають високоякісні послуги анестезії. Рекомендуємо всім!
-              </blockquote>
-            </div>
-            <div class="testimonial-author">
-              <img class="author-photo" src="images/foto1.jpg" alt="Фото Ігоря О." width="50" height="50" loading="lazy">
-              <div class="author-info">
-                <p class="author-name">Ігор О.</p>
-                <p class="author-position">Головний лікар стоматологічної клініки Identico</p>
-              </div>
-            </div>
-          </article>
-    
-          <!-- Карточка 2 -->
-          <article class="testimonial-card">
-            <div class="testimonial-content">
-              <div class="stars">
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-              </div>
-              <blockquote class="testimonial-text">
-                Ідеальні партнери для складних процедур. Анестезіологи завжди пунктуальні, уважні до деталей та чудово взаємодіють із нашим персоналом.
-              </blockquote>
-            </div>
-            <div class="testimonial-author">
-              <img class="author-photo" src="images/foto2.jpg" alt="Фото Ольги К." width="50" height="50" loading="lazy">
-              <div class="author-info">
-                <p class="author-name">Олександр І.</p>
-                <p class="author-position">Хірург-імплантолог AstraDent</p>
-              </div>
-            </div>
-          </article>
-    
-          <!-- Карточка 3 -->
-          <article class="testimonial-card">
-            <div class="testimonial-content">
-              <div class="stars">
-              <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                <use href="images/icons.svg#star-icon"></use>
-              </svg>
-              <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                <use href="images/icons.svg#star-icon"></use>
-              </svg>
-              <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                <use href="images/icons.svg#star-icon"></use>
-              </svg>
-              <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                <use href="images/icons.svg#star-icon"></use>
-              </svg>
-              <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                <use href="images/icons.svg#star-icon"></use>
-              </svg>
-            </div>
-              <blockquote class="testimonial-text">
-                З командою працюємо вже понад рік. Завжди пунктуальні, підготовлені й на зв’язку. Пацієнти почуваються спокійно, а ми впевнені в кожному втручанні. 
-              </blockquote>
-            </div>
-            <div class="testimonial-author">
-              <img class="author-photo" src="images/foto3.jpg" alt="Фото Івана П." width="50" height="50" loading="lazy">
-              <div class="author-info">
-                <p class="author-name">Орест П.</p>
-                <p class="author-position">Головний лікар Piurko family dental care</p>
-              </div>
-            </div>
-          </article>
-    
-          <!-- Карточка 4 -->
-          <article class="testimonial-card">
-            <div class="testimonial-content">
-              <div class="stars">
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-                <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
-                  <use href="images/icons.svg#star-icon"></use>
-                </svg>
-              </div>
-              <blockquote class="testimonial-text">
-                Професіоналізм на вищому рівні. Від обладнання до підходу до пацієнтів — усе продумано. Можу довірити будь-яку процедуру.
-              </blockquote>
-            </div>
-            <div class="testimonial-author">
-              <img class="author-photo" src="images/foto4.jpg" alt="Фото Марії С." width="50" height="50" loading="lazy">
-              <div class="author-info">
-                <p class="author-name">Владислав К.</p>
-                <p class="author-position">Головний лікар Dental Office</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="logos-section">
-      <div class="container logos-wrapper">
-        <ul class="logos-list">
-          <li class="logos-item">
-            <a href="https://www.instagram.com/identico_dental_clinic?igsh=c2dwbTFhNWtqNDhs" target="_blank"><img src="images/partnLogos1.png" alt="Партнер 1" /></a>
-          </li>
-          <li class="logos-item">
-            <a href="https://www.instagram.com/ndc_clinic_ua?igsh=dmh2c2gzZGYxbGt0" target="_blank"><img src="images/partnLogos2.png" alt="Партнер 2" /></a>
-          </li>
-          <li class="logos-item">
-            <a href="https://www.instagram.com/iodent_clinic?igsh=YzYydWRreTM1ZDhq" target="_blank"><img src="images/partnLogos3.png" alt="Партнер 3" /></a>
-          </li>
-          <li class="logos-item">
-            <a href="https://www.instagram.com/sigma.dent?igsh=MXhrdHo4Y3NiMTJ4ZA" target="_blank"><img src="images/partnLogos4.png" alt="Партнер 4"  class="logos-item-small"/></a>
-          </li>
-          <li class="logos-item">
-            <a href="https://www.instagram.com/piurko_dental?igsh=Z2R4cHo5b2U2ZDBh" target="_blank"><img src="images/partnLogos5.png" alt="Партнер 5"/></a>
-          </li>
-          <li class="logos-item">
-            <a href="https://www.instagram.com/csm_clinic_?igsh=MWJoY2RnYTJqdzhmaA" target="_blank"><img src="images/partnLogos6.jpg" alt="Партнер 6" /></a>
-          </li>
-          <li class="logos-item">
-            <a href="https://www.instagram.com/_dental__office__?igsh=YW4ybDVlNWljdXZ5" target="_blank"><img src="images/partnLogos7.png" alt="Партнер 7" /></a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="faq" class="faq section-padding">
-      <div class="container">
-        <div class="faq-content">
-          <h2 class="section-title">Коротко про головне</h2>
-          <p class="section-description">
-              Наш досвід показує, що прозорість та чітке розуміння процесів — ключ до довготривалої співпраці. У цьому блоці ми даємо відповіді на запитання, які допоможуть вам краще познайомитися з підходом AnestPro, нашими можливостями та цінностями.
-          </p>
-          <svg class="services-line" width="162" height="2" viewBox="0 0 162 2" fill="none" aria-hidden="true">
-            <path d="M1 1H81H161" stroke="#006C83" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-      </div>
-          
-          <div class="faq-accordion">
-              <div class="faq-item">
-                  <div class="faq-question">
-                      <h3>За скільки часу треба домовлятись за седацію/наркоз?</h3>
-                      <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                          <path d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z" fill="#006C83"/>
-                      </svg>
-                  </div>
-                  <div class="faq-answer">
-                      <p>Ми працюємо за попереднім записом, але в екстрених випадках можемо організувати виїзд навіть у день звернення.</p>
-                  </div>
-              </div>
-              
-              <div class="faq-item">
-                  <div class="faq-question">
-                      <h3>Ви надаєте послуги лише постійним партнерам, чи можливі разові звернення?</h3>
-                      <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                          <path d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z" fill="#006C83"/>
-                      </svg>
-                  </div>
-                  <div class="faq-answer">
-                      <p>Ми відкриті до співпраці як на постійній основі, так і для разових випадків — обговоримо оптимальний формат саме для вас.</p>
-                  </div>
-              </div>
-              
-              <div class="faq-item">
-                  <div class="faq-question">
-                      <h3>Чи входять медикаменти та обладнання у вартість послуги?</h3>
-                      <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                          <path d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z" fill="#006C83"/>
-                      </svg>
-                  </div>
-                  <div class="faq-answer">
-                      <p>Так, наша команда приїжджає повністю укомплектованою: з сертифікованими медикаментами, сучасним обладнанням та усіма витратними матеріалами.</p>
-                  </div>
-              </div>
-              
-              <div class="faq-item">
-                  <div class="faq-question">
-                      <h3>Чи можете ви допомогти налагодити власну анестезіологічну службу?</h3>
-                      <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                          <path d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z" fill="#006C83"/>
-                      </svg>
-                  </div>
-                  <div class="faq-answer">
-                      <p>Так, ми пропонуємо послугу «під ключ»: підбір обладнання, навчання персоналу та впровадження стандартів роботи.</p>
-                  </div>
-              </div>
-              
-              <div class="faq-item">
-                  <div class="faq-question">
-                      <h3>Чи надаєте ви документи для офіційної співпраці?</h3>
-                      <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                          <path d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z" fill="#006C83"/>
-                      </svg>
-                  </div>
-                  <div class="faq-answer">
-                      <p>Так, ми маємо всі необхідні ліцензії та укладаємо офіційні договори відповідно до вимог МОЗ.</p>
-                  </div>
-              </div>
-              
-              <div class="faq-item">
-                  <div class="faq-question">
-                      <h3>Як записатись на консультацію або обговорити умови?</h3>
-                      <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                          <path d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z" fill="#006C83"/>
-                      </svg>
-                  </div>
-                  <div class="faq-answer">
-                      <p>Натисніть на кнопку "Дізнатись умови співпраці" і залиште свої контакти — ми з вами зв'яжемось найближчим часом. Або звяжіться з нами за контактами зазначеними на сайті.</p>
-                  </div>
-              </div>
-          </div>
-          
-        
-      </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container contact-container">
-      <div class="contact-content">
-        <div class="contact-info">
-          <h2 class="section-title">Залишились запитання?</h2>
-          <p class="contact-description">
-            Ми завжди на зв'язку! <br>Залиште заявку або зв'яжіться з нами зручним <br>способом — і ми надамо детальну консультацію, допоможемо з вибором послуги та відповімо на всі ваші запитання.
-          </p>
-        </div>
-        
-        <div class="contact-form-container">
-          <form class="contact-form" id="contactForm" novalidate>
-            <input type="text" placeholder="Повне ім'я*" required class="form-input" name="name">
-            <input type="tel" placeholder="Телефон*" required class="form-input" name="phone">
-            <textarea placeholder="Чим ми можемо бути корисними?" class="form-textarea" name="message"></textarea>
-            <button type="submit" class="cta-button" id="submitBtn">
-              <span>Відправити</span>
-              <svg class="btn-icon" width="33" height="32">
-                <use href="images/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-    
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-main">
-        <div class="footer-logo-wrapper">
-          <a href="#" class="logo">
-            <img src="images/Logotype.png" alt="AnestPro Logo" width="199" height="52">
-          </a>
-          <div class="footer-contact mobile-hidden">
-            <h3 class="footer-heading"><a href="tel:+380689648251" class="footer-heading">+38(068)964 82 51</a></h3>
-          </div>
-        </div>
-        
-        <div class="footer-nav">
-          <ul class="footer-links">
-            <li><a href="#services">Послуги</a></li>
-            <li><a href="#why-us">Чому нас обирають?</a></li>
-            <li><a href="#services">Послуги, які ми надаємо</a></li>
-            <li><a href="#team">Про команду</a></li>
-            <li><a href="#testimonials">Відгуки</a></li>
-            <li><a href="#faq">Часті запитання</a></li>
-            <li><a href="#contact">Контакти</a></li>
-            <li class="desktop-hidden"> 
-              <a href="tel:+380689648251" class="footer-phone-link">+38(068)964 82 51</a>
+                </div>
+                <div class="card-bottom">
+                  <img class="card-image" src="images/service5.png" alt="Продаж медичного обладнання" loading="lazy" />
+                  <button class="card-arrow open-modal-btn" aria-label="Детальніше про екстрені виклики">
+                    <svg width="32" height="32" viewBox="0 0 19 19" aria-hidden="true">
+                      <use href="images/icons.svg#icon-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
             </li>
           </ul>
         </div>
-        
-        <div class="footer-socials-block">
-          <div class="footer-socials-wrapper">
-            <a href="#" class="footer-social-link" aria-label="Facebook" target="_blank">
-              <svg class="footer-social-icon" width="24" height="24">
-                <use xlink:href="images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/anestpro.ua?igsh=MWczYjF4cXAzeTM1MQ%3D%3D&utm_source=qr" class="footer-social-link" aria-label="Instagram" target="_blank">
-              <svg class="footer-social-icon" width="24" height="24">
-                <use xlink:href="images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-            <a href="https://t.me/Glib_Ovsienko" class="footer-social-link" aria-label="Telegram" target="_blank">
-              <svg class="footer-social-icon" width="24" height="24">
-                <use xlink:href="images/icons.svg#icon-telegram"></use>
-              </svg>
-            </a>
-            <a href="viber://add?number=380689648251" class="footer-social-link" aria-label="Viber" target="_blank">
-              <svg class="footer-social-icon" width="24" height="24">
-                <use xlink:href="images/icons.svg#icon-viber"></use>
-              </svg>
-            </a>
-            <a href="https://wa.me/380689648251" class="footer-social-link" aria-label="WhatsApp" target="_blank">
-              <svg class="footer-social-icon" width="24" height="24">
-                <use xlink:href="images/icons.svg#icon-whatsapp"></use>
-              </svg>
-            </a>
+      </section>
+      <section id="why-us" class="why-section">
+        <div class="partners-wave mobile-wave">
+          <svg viewBox="0 0 2000 350" preserveAspectRatio="none">
+            <path d="M-100 150L2100 0L2200 200L0 350L-100 150Z" fill="#006c83" fill-opacity="1" />
+          </svg>
+        </div>
+
+        <div class="container why-header">
+          <h2 class="why-title">Чому нас<br />обирають?</h2>
+          <div class="services-desc why-desc">
+            <p class="why-description">
+              Ми — більше, ніж просто анестезіологи. Гарантуємо безпеку, комфорт і чітку організацію кожного етапу.
+              Працюємо офіційно, сучасно й завжди на стороні пацієнта та клініки.
+            </p>
+            <svg class="services-line" width="162" height="2" viewBox="0 0 162 2" fill="none">
+              <path d="M1 1H81H161" stroke="#006C83" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+            </svg>
           </div>
         </div>
-        
-      
-        <a href="#hero" class="scroll-top">
-          <svg class="scroll-top-icon">
-             <use xlink:href="images/icons.svg#scroll-top-btn"></use>
+
+        <div class="container cards-container">
+          <div class="card">
+            <div class="card-content">
+              <img src="images/why1.svg" alt="Іконка готової анестезіологічної бригади" class="card-icon" />
+              <div class="card-text">
+                <h3>Готова анестезіологічна бригада</h3>
+                <p>У потрібний день і час—досвідчена команда прибуде до вашої клініки.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Копии карточек -->
+          <div class="card">
+            <div class="card-content">
+              <img src="images/why2.svg" alt="Іконка юридичної відповідності" class="card-icon" />
+              <div class="card-text">
+                <h3>Юридична відповідність</h3>
+                <p>Ліцензія МОЗ України. Офіційна співпраця та відповідність усім вимогам</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="images/why3.svg" alt="Іконка комплексного забезпечення" class="card-icon" />
+              <div class="card-text">
+                <h3>Комплексне забезпечення</h3>
+                <p>Сучасне обладнання, сертифіковані медикаменти та витратні матеріали — все під контролем.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="images/why4.svg" alt="Іконка модернізації служби" class="card-icon" />
+              <div class="card-text">
+                <h3>Модернізація служби</h3>
+                <p>Допомагаємо розвивати й налаштовувати ефективну анестезіологічну службу у вашій клініці.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="images/why5.svg" alt="Іконка якості та професіоналізму" class="card-icon" />
+              <div class="card-text">
+                <h3>Якість та професіоналізм</h3>
+                <p>Працюємо за міжнародними стандартами. Комфорт і безпека пацієнтів — наш пріоритет.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="hero-button why-btn open-modal-btn">
+          <span class="btn-text">Дізнатись деталі</span>
+          <svg class="btn-icon" width="33" height="32">
+            <use href="images/icons.svg#icon-arrow"></use>
           </svg>
         </a>
-      </div>
-      
-      <div class="footer-divider"></div>
-      
-      <div class="footer-copyright">
-        <p>© Anest Pro, 2025. Усі права захищено.</p>
-      </div>
-    </div>
-  </footer>
+      </section>
 
-<!-- Бургерменю==================================== -->
+      <section id="team" class="team-section">
+        <div class="team-container">
+          <!-- Блок с текстом -->
+          <div class="team-text-block">
+            <h2 class="team-title">Ми - команда професіоналів</h2>
+            <p class="team-description">
+              Досвідчена команда анестезіологів для стоматологічних клінік і медичних установ.
+            </p>
+            <svg width="162" height="2" viewBox="0 0 162 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1H81H161" stroke="#FAFAFA" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
 
-  <div class="burger-menu" id="burgerMenu">
-    <div class="burger-menu__header">
-      <img src="/images/Logotype.png" alt="Логотип" class="burger-menu__logo" />
-      <span class="menu-text">Меню</span>
-      <button class="burger-close" id="closeBtn" aria-label="Закрыть меню">
-        <svg class="icon icon-close" width="24" height="24">
-          <use href="images/icons.svg#icon-close"></use>
-        </svg>
-      </button>
-    </div>
-    
-    <div class="burger-content">
-      <nav class="burger-nav">
-        <ul class="burger-list">
-          <li><a href="#services" class="burger-link">Послуги</a></li>
-          <li><a href="#why-us" class="burger-link">Чому нас обирають?</a></li>
-          <li><a href="#team" class="burger-link">Про команду</a></li>
-          <li><a href="#testimonials" class="burger-link">Відгуки</a></li>
-          <li><a href="#faq" class="burger-link">Часті запитання</a></li>
-          <li><a href="#contact" class="burger-link">Контакти</a></li>
-        </ul>
-      </nav>
-      
-      <a href="tel:+380689648251" class="burger-phone">+38(068)964 82 51</a>
-      
-      <div class="burger-socials">
-        <a href="#" class="social-link" aria-label="Facebook" target="_blank">
-          <svg class="icon" width="24" height="24">
-            <use xlink:href="images/icons.svg#icon-facebook"></use>
+          <!-- Блок с фото и лого -->
+          <div class="team-image-block">
+            <div class="team-photo">
+              <img
+                src="images/phototeam1.png"
+                alt="Фото команди професіоналів AnestPro"
+                class="team-photo"
+                loading="lazy"
+              />
+            </div>
+            <div class="team-logo">
+              <a href="#hero" class="logo">
+                <img src="images/LogotypeSVG.svg" alt="AnestPro Logo" width="199" height="52" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="testimonials">
+        <div class="container testimonials-header">
+          <h2 class="testimonials-title">Про нас говорять</h2>
+          <div class="services-desc">
+            <p class="testimonials-text">
+              Ми цінуємо довіру кожного, хто обирає AnestPro. Саме тому докладаємо максимум зусиль, щоб забезпечити
+              найвищий рівень безпеки, комфорту та професіоналізму.
+            </p>
+            <svg class="services-line" width="162" height="2" viewBox="0 0 162 2" fill="none" aria-hidden="true">
+              <path d="M1 1H81H161" stroke="#006C83" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="testimonials-carousel">
+            <!-- Карточка 1 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                </div>
+                <blockquote class="testimonial-text">
+                  Відмінна команда професіоналів! Ми співпрацюємо вже кілька років, і вони завжди надають високоякісні
+                  послуги анестезії. Рекомендуємо всім!
+                </blockquote>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  class="author-photo"
+                  src="images/foto1.jpg"
+                  alt="Фото Ігоря О."
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <p class="author-name">Ігор О.</p>
+                  <p class="author-position">Головний лікар стоматологічної клініки Identico</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 2 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                </div>
+                <blockquote class="testimonial-text">
+                  Ідеальні партнери для складних процедур. Анестезіологи завжди пунктуальні, уважні до деталей та чудово
+                  взаємодіють із нашим персоналом.
+                </blockquote>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  class="author-photo"
+                  src="images/foto2.jpg"
+                  alt="Фото Ольги К."
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <p class="author-name">Олександр І.</p>
+                  <p class="author-position">Хірург-імплантолог AstraDent</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 3 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                </div>
+                <blockquote class="testimonial-text">
+                  З командою працюємо вже понад рік. Завжди пунктуальні, підготовлені й на зв’язку. Пацієнти почуваються
+                  спокійно, а ми впевнені в кожному втручанні.
+                </blockquote>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  class="author-photo"
+                  src="images/foto3.jpg"
+                  alt="Фото Івана П."
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <p class="author-name">Орест П.</p>
+                  <p class="author-position">Головний лікар Piurko family dental care</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 4 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                  <svg class="star-icon" width="20" height="20" viewBox="0 0 23 23">
+                    <use href="images/icons.svg#star-icon"></use>
+                  </svg>
+                </div>
+                <blockquote class="testimonial-text">
+                  Професіоналізм на вищому рівні. Від обладнання до підходу до пацієнтів — усе продумано. Можу довірити
+                  будь-яку процедуру.
+                </blockquote>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  class="author-photo"
+                  src="images/foto4.jpg"
+                  alt="Фото Марії С."
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <p class="author-name">Владислав К.</p>
+                  <p class="author-position">Головний лікар Dental Office</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="logos-section">
+        <div class="container logos-wrapper">
+          <ul class="logos-list">
+            <li class="logos-item">
+              <a
+                href="https://www.instagram.com/identico_dental_clinic?igsh=c2dwbTFhNWtqNDhs"
+                target="_blank"
+                rel="noopener"
+                ><img src="images/partnLogos1.png" alt="Identico Dental Clinic" loading="lazy"
+              /></a>
+            </li>
+            <li class="logos-item">
+              <a href="https://www.instagram.com/ndc_clinic_ua?igsh=dmh2c2gzZGYxbGt0" target="_blank" rel="noopener"
+                ><img src="images/partnLogos2.png" alt="NDC Clinic" loading="lazy"
+              /></a>
+            </li>
+            <li class="logos-item">
+              <a href="https://www.instagram.com/iodent_clinic?igsh=YzYydWRreTM1ZDhq" target="_blank" rel="noopener"
+                ><img src="images/partnLogos3.png" alt="IO Dent Clinic" loading="lazy"
+              /></a>
+            </li>
+            <li class="logos-item">
+              <a href="https://www.instagram.com/sigma.dent?igsh=MXhrdHo4Y3NiMTJ4ZA" target="_blank" rel="noopener"
+                ><img src="images/partnLogos4.png" alt="Sigma Dent" class="logos-item-small" loading="lazy"
+              /></a>
+            </li>
+            <li class="logos-item">
+              <a href="https://www.instagram.com/piurko_dental?igsh=Z2R4cHo5b2U2ZDBh" target="_blank" rel="noopener"
+                ><img src="images/partnLogos5.png" alt="Piurko Dental" loading="lazy"
+              /></a>
+            </li>
+            <li class="logos-item">
+              <a href="https://www.instagram.com/csm_clinic_?igsh=MWJoY2RnYTJqdzhmaA" target="_blank" rel="noopener"
+                ><img src="images/partnLogos6.jpg" alt="CSM Clinic" loading="lazy"
+              /></a>
+            </li>
+            <li class="logos-item">
+              <a href="https://www.instagram.com/_dental__office__?igsh=YW4ybDVlNWljdXZ5" target="_blank" rel="noopener"
+                ><img src="images/partnLogos7.png" alt="Dental Office" loading="lazy"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq" class="faq section-padding">
+        <div class="container">
+          <div class="faq-content">
+            <h2 class="section-title">Коротко про головне</h2>
+            <p class="section-description">
+              Наш досвід показує, що прозорість та чітке розуміння процесів — ключ до довготривалої співпраці. У цьому
+              блоці ми даємо відповіді на запитання, які допоможуть вам краще познайомитися з підходом AnestPro, нашими
+              можливостями та цінностями.
+            </p>
+            <svg class="services-line" width="162" height="2" viewBox="0 0 162 2" fill="none" aria-hidden="true">
+              <path d="M1 1H81H161" stroke="#006C83" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="faq-accordion">
+            <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+              <div class="faq-question">
+                <h3 itemprop="name">За скільки часу треба домовлятись за седацію/наркоз?</h3>
+                <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                  <path
+                    d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z"
+                    fill="#006C83"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">
+                  Ми працюємо за попереднім записом, але в екстрених випадках можемо організувати виїзд навіть у день
+                  звернення.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Ви надаєте послуги лише постійним партнерам, чи можливі разові звернення?</h3>
+                <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                  <path
+                    d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z"
+                    fill="#006C83"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Ми відкриті до співпраці як на постійній основі, так і для разових випадків — обговоримо оптимальний
+                  формат саме для вас.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Чи входять медикаменти та обладнання у вартість послуги?</h3>
+                <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                  <path
+                    d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z"
+                    fill="#006C83"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Так, наша команда приїжджає повністю укомплектованою: з сертифікованими медикаментами, сучасним
+                  обладнанням та усіма витратними матеріалами.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Чи можете ви допомогти налагодити власну анестезіологічну службу?</h3>
+                <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                  <path
+                    d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z"
+                    fill="#006C83"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Так, ми пропонуємо послугу «під ключ»: підбір обладнання, навчання персоналу та впровадження
+                  стандартів роботи.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Чи надаєте ви документи для офіційної співпраці?</h3>
+                <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                  <path
+                    d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z"
+                    fill="#006C83"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>Так, ми маємо всі необхідні ліцензії та укладаємо офіційні договори відповідно до вимог МОЗ.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Як записатись на консультацію або обговорити умови?</h3>
+                <svg class="icon" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                  <path
+                    d="M0.438696 19.5452C0.157489 19.2639 -0.000484467 18.8824 -0.000484467 18.4847C-0.000484467 18.0869 0.157489 17.7055 0.438696 17.4242L7.8637 9.9992L0.438696 2.5742C0.165459 2.29129 0.014267 1.91239 0.0176849 1.51909C0.021102 1.1258 0.178856 0.749578 0.456967 0.471466C0.73508 0.193354 1.1113 0.0356026 1.50459 0.0321846C1.89789 0.0287666 2.27679 0.179958 2.5597 0.453196L11.0452 8.9387C11.3264 9.21999 11.4844 9.60145 11.4844 9.9992C11.4844 10.3969 11.3264 10.7784 11.0452 11.0597L2.5597 19.5452C2.2784 19.8264 1.89694 19.9844 1.4992 19.9844C1.10145 19.9844 0.719987 19.8264 0.438696 19.5452Z"
+                    fill="#006C83"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Натисніть на кнопку "Дізнатись умови співпраці" і залиште свої контакти — ми з вами зв'яжемось
+                  найближчим часом. Або звяжіться з нами за контактами зазначеними на сайті.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container contact-container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2 class="section-title">Залишились запитання?</h2>
+              <p class="contact-description">
+                Ми завжди на зв'язку! <br />Залиште заявку або зв'яжіться з нами зручним <br />способом — і ми надамо
+                детальну консультацію, допоможемо з вибором послуги та відповімо на всі ваші запитання.
+              </p>
+            </div>
+
+            <div class="contact-form-container">
+              <form class="contact-form" id="contactForm" novalidate>
+                <input type="text" placeholder="Повне ім'я*" required class="form-input" name="name" />
+                <input type="tel" placeholder="Телефон*" required class="form-input" name="phone" />
+                <textarea placeholder="Чим ми можемо бути корисними?" class="form-textarea" name="message"></textarea>
+                <button type="submit" class="cta-button" id="submitBtn">
+                  <span>Відправити</span>
+                  <svg class="btn-icon" width="33" height="32">
+                    <use href="images/icons.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo-wrapper">
+            <a href="#hero" class="logo">
+              <img src="images/LogotypeSVG.svg" alt="AnestPro Logo" width="199" height="52" />
+            </a>
+            <div class="footer-contact mobile-hidden">
+              <h3 class="footer-heading"><a href="tel:+380689648251" class="footer-heading">+38(068)964 82 51</a></h3>
+            </div>
+          </div>
+
+          <div class="footer-nav">
+            <ul class="footer-links">
+              <li><a href="#services">Послуги</a></li>
+              <li><a href="#why-us">Чому нас обирають?</a></li>
+              <li><a href="#team">Про команду</a></li>
+              <li><a href="#testimonials">Відгуки</a></li>
+              <li><a href="#faq">Часті запитання</a></li>
+              <li><a href="#contact">Контакти</a></li>
+              <li class="desktop-hidden">
+                <a href="tel:+380689648251" class="footer-phone-link">+38(068)964 82 51</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-socials-block">
+            <div class="footer-socials-wrapper">
+              <a
+                href="https://www.facebook.com/anestpro.ua"
+                class="footer-social-link"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="footer-social-icon" width="24" height="24">
+                  <use xlink:href="images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/anestpro.ua?igsh=MWczYjF4cXAzeTM1MQ%3D%3D&utm_source=qr"
+                class="footer-social-link"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="footer-social-icon" width="24" height="24">
+                  <use xlink:href="images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+              <a
+                href="https://t.me/Glib_Ovsienko"
+                class="footer-social-link"
+                aria-label="Telegram"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="footer-social-icon" width="24" height="24">
+                  <use xlink:href="images/icons.svg#icon-telegram"></use>
+                </svg>
+              </a>
+              <a
+                href="viber://add?number=380689648251"
+                class="footer-social-link"
+                aria-label="Viber"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="footer-social-icon" width="24" height="24">
+                  <use xlink:href="images/icons.svg#icon-viber"></use>
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/380689648251"
+                class="footer-social-link"
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="footer-social-icon" width="24" height="24">
+                  <use xlink:href="images/icons.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <a href="#hero" class="scroll-top">
+            <svg class="scroll-top-icon">
+              <use xlink:href="images/icons.svg#scroll-top-btn"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-copyright">
+          <p>© Anest Pro, 2025. Усі права захищено.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Бургерменю==================================== -->
+
+    <div class="burger-menu" id="burgerMenu">
+      <div class="burger-menu__header">
+        <img src="/images/LogotypeSVG.svg" alt="Логотип" class="burger-menu__logo" />
+        <span class="menu-text">Меню</span>
+        <button class="burger-close" id="closeBtn" aria-label="Закрыть меню">
+          <svg class="icon icon-close" width="24" height="24">
+            <use href="images/icons.svg#icon-close"></use>
           </svg>
-        </a>
-        <a href="https://www.instagram.com/anestpro.ua?igsh=MWczYjF4cXAzeTM1MQ%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram" target="_blank">
-          <svg class="icon" width="24" height="24">
+        </button>
+      </div>
+
+      <div class="burger-content">
+        <nav class="burger-nav">
+          <ul class="burger-list">
+            <li><a href="#services" class="burger-link">Послуги</a></li>
+            <li><a href="#why-us" class="burger-link">Чому нас обирають?</a></li>
+            <li><a href="#team" class="burger-link">Про команду</a></li>
+            <li><a href="#testimonials" class="burger-link">Відгуки</a></li>
+            <li><a href="#faq" class="burger-link">Часті запитання</a></li>
+            <li><a href="#contact" class="burger-link">Контакти</a></li>
+          </ul>
+        </nav>
+
+        <a href="tel:+380689648251" class="burger-phone">+38(068)964 82 51</a>
+
+        <div class="burger-socials">
+          <a
+            href="https://www.instagram.com/anestpro.ua?igsh=MWczYjF4cXAzeTM1MQ%3D%3D&utm_source=qr"
+            class="social-link"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon" width="24" height="24">
+              <use xlink:href="images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+          <a href="https://t.me/Glib_Ovsienko" class="social-link" aria-label="Telegram" target="_blank" rel="noopener">
+            <svg class="icon" width="24" height="24">
+              <use xlink:href="images/icons.svg#icon-telegram"></use>
+            </svg>
+          </a>
+          <a href="https://wa.me/380689648251" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg class="icon" width="24" height="24">
+              <use xlink:href="images/icons.svg#icon-whatsapp"></use>
+            </svg>
+          </a>
+          <a
+            href="viber://add?number=380689648251"
+            class="social-link"
+            aria-label="Viber"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon" width="24" height="24">
+              <use xlink:href="images/icons.svg#icon-viber"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Соцсети======================================= -->
+
+    <div class="socials-sticky">
+      <div class="socials-container">
+        <a
+          href="https://www.instagram.com/anestpro.ua?igsh=MWczYjF4cXAzeTM1MQ%3D%3D&utm_source=qr"
+          class="social-link"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="icon" width="24" height="24" fill="#006C83">
             <use xlink:href="images/icons.svg#icon-instagram"></use>
           </svg>
         </a>
-        <a href="https://t.me/Glib_Ovsienko" class="social-link" aria-label="Telegram" target="_blank">
-          <svg class="icon" width="24" height="24">
+        <a href="https://t.me/Glib_Ovsienko" class="social-link" aria-label="Telegram" target="_blank" rel="noopener">
+          <svg class="icon" width="24" height="24" fill="#006C83">
             <use xlink:href="images/icons.svg#icon-telegram"></use>
           </svg>
         </a>
-        <a href="https://wa.me/380689648251" class="social-link" aria-label="WhatsApp" target="_blank">
-          <svg class="icon" width="24" height="24">
-            <use xlink:href="images/icons.svg#icon-whatsapp"></use>
-          </svg>
-        </a>
-        <a href="viber://add?number=380689648251" class="social-link" aria-label="Viber" target="_blank">
-          <svg class="icon" width="24" height="24">
+        <a href="viber://add?number=380689648251" class="social-link" aria-label="Viber" target="_blank" rel="noopener">
+          <svg class="icon" width="24" height="24" fill="#006C83">
             <use xlink:href="images/icons.svg#icon-viber"></use>
           </svg>
         </a>
+        <a href="https://wa.me/380689648251" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+          <svg class="icon" width="24" height="24" fill="#006C83">
+            <use xlink:href="images/icons.svg#icon-whatsapp"></use>
+          </svg>
+        </a>
       </div>
     </div>
-  </div>
+    <!-- Модалка==================== -->
 
-<!-- Соцсети======================================= -->
-
-<div class="socials-sticky">
-  <div class="socials-container">
-    <a href="#" class="social-link" aria-label="Facebook" target="_blank">
-      <svg class="icon" width="24" height="24" fill="#006C83">
-        <use xlink:href="images/icons.svg#icon-facebook"></use>
-      </svg>
-    </a>
-    <a href="https://www.instagram.com/anestpro.ua?igsh=MWczYjF4cXAzeTM1MQ%3D%3D&utm_source=qr"  class="social-link" aria-label="Instagram" target="_blank">
-      <svg class="icon" width="24" height="24" fill="#006C83">
-        <use xlink:href="images/icons.svg#icon-instagram"></use>
-      </svg>
-    </a>
-    <a href="https://t.me/Glib_Ovsienko" class="social-link" aria-label="Telegram" target="_blank">
-      <svg class="icon" width="24" height="24" fill="#006C83">
-        <use xlink:href="images/icons.svg#icon-telegram"></use>
-      </svg>
-    </a>
-    <a href="viber://add?number=380689648251" class="social-link" aria-label="Viber" target="_blank">
-      <svg class="icon" width="24" height="24" fill="#006C83">
-        <use xlink:href="images/icons.svg#icon-viber"></use>
-      </svg>
-    </a>
-    <a href="https://wa.me/380689648251" class="social-link" aria-label="WhatsApp" target="_blank">
-      <svg class="icon" width="24" height="24" fill="#006C83">
-        <use xlink:href="images/icons.svg#icon-whatsapp"></use>
-      </svg>
-    </a>
-  </div>
-</div>
-<!-- Модалка==================== -->
-
-<!-- Модальное окно -->
-<div class="modal-overlay">
-  <div class="modal-container">
-    <div class="modal-header">
-      <h3 class="modal-title">Залишились запитання?</h3>
-      <button class="modal-close-btn">
-        <svg class="icon icon-close" width="24" height="24">
-          <use href="images/icons.svg#icon-close"></use>
-        </svg>
-      </button>
-    </div>
-    <div class="modal-content">
-      <p class="modal-description">
-        Ми завжди на зв'язку! Залиште заявку і ми надамо детальну консультацію.
-      </p>
-      <form class="modal-form" novalidate>
-        <div class="modal-form-group">
-          <input name="name" type="text" placeholder="Повне ім'я*" required class="modal-input name">
-          <div class="error-message name-error">Будь ласка, введіть ваше ім'я</div>
-          <input name="phone" type="tel" placeholder="Телефон*" required class="modal-input phone">
-          <div class="error-message phone-error">Будь ласка, введіть ваш телефон</div>
-          <textarea name="message" placeholder="Чим ми можемо бути корисними?" class="modal-textarea"></textarea>
-          <button type="submit" class="modal-submit-btn">
-            <span>Відправити</span>
-            <svg class="btn-icon" width="33" height="32">
-              <use href="images/icons.svg#icon-arrow"></use>
+    <!-- Модальное окно -->
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title">Залишились запитання?</h3>
+          <button class="modal-close-btn">
+            <svg class="icon icon-close" width="24" height="24">
+              <use href="images/icons.svg#icon-close"></use>
             </svg>
           </button>
         </div>
-      </form>
-      <div class="success-message">
-        Дякуємо! Ваше повідомлення відправлено. Ми зв'яжемося з вами найближчим часом.
+        <div class="modal-content">
+          <p class="modal-description">Ми завжди на зв'язку! Залиште заявку і ми надамо детальну консультацію.</p>
+          <form class="modal-form" novalidate>
+            <div class="modal-form-group">
+              <input name="name" type="text" placeholder="Повне ім'я*" required class="modal-input name" />
+              <div class="error-message name-error">Будь ласка, введіть ваше ім'я</div>
+              <input name="phone" type="tel" placeholder="Телефон*" required class="modal-input phone" />
+              <div class="error-message phone-error">Будь ласка, введіть ваш телефон</div>
+              <textarea name="message" placeholder="Чим ми можемо бути корисними?" class="modal-textarea"></textarea>
+              <button type="submit" class="modal-submit-btn">
+                <span>Відправити</span>
+                <svg class="btn-icon" width="33" height="32">
+                  <use href="images/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <div class="success-message">
+            Дякуємо! Ваше повідомлення відправлено. Ми зв'яжемося з вами найближчим часом.
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
+    <script src="formscripts.js"></script>
+    <script src="scripts.js"></script>
 
-  <script src="formscripts.js"></script>
-  <script src="scripts.js"></script>
-</body>
+    <!-- Структурированная разметка Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "AnestPro",
+        "description": "Анестезіологічний супровід під ключ для стоматологічних клінік та медичних центрів",
+        "url": "https://anestpro.org",
+        "logo": "https://anestpro.org/images/LogotypeSVG.svg",
+        "telephone": "+380689648251",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "UA"
+        },
+        "serviceType": "Анестезіологічні послуги",
+        "areaServed": "Україна",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Послуги AnestPro",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Анестезіологічний супровід"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Організація анестезіологічної служби"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Стажування для анестезіологів"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Курси по невідкладним станам"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Продаж обладнання"
+              }
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "4"
+        }
+      }
+    </script>
+  </body>
 </html>

@@ -1,185 +1,109 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq .faq-item');
-    
-    faqItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Закриваємо всі відкриті елементи
-            faqItems.forEach(el => {
-                if (el !== item && el.classList.contains('active')) {
-                    el.classList.remove('active');
-                }
-            });
-            
-            // Переключаємо поточний елемент
-            item.classList.toggle('active');
-        });
-    });
-});
-
-
-const carousel = document.querySelector('.testimonials-carousel');
-
-let isMouseDown = false;
-let startX;
-let scrollLeft;
-
-carousel.addEventListener('mousedown', (e) => {
-  isMouseDown = true;
-  startX = e.pageX - carousel.offsetLeft;
-  scrollLeft = carousel.scrollLeft;
-  carousel.classList.add('grabbing');
-});
-
-carousel.addEventListener('mouseleave', () => {
-  isMouseDown = false;
-  carousel.classList.remove('grabbing');
-  carousel.classList.remove('grabbing', 'noselect');
-});
-
-carousel.addEventListener('mouseup', () => {
-  isMouseDown = false;
-  carousel.classList.remove('grabbing');
-  carousel.classList.remove('grabbing', 'noselect');
-});
-
-carousel.addEventListener('mousemove', (e) => {
-  if (!isMouseDown) return; // только если мышь зажата
-  e.preventDefault();
-  const x = e.pageX - carousel.offsetLeft;
-  const walk = (x - startX) * 2; // коэффициент для увеличения скорости прокрутки
-  carousel.scrollLeft = scrollLeft - walk;
-  carousel.classList.add('grabbing', 'noselect');
-});
-
-
-
-// форма отправки
-
-
-
-
-// слайдер карточки=========================================================================== 
-const serviceSlider = document.querySelector('.services-slider');
-
-let isServiceSliderActive = false;
-let serviceSliderStartX;
-let serviceSliderScrollLeft;
-
-serviceSlider.addEventListener('mousedown', (e) => {
-  isServiceSliderActive = true;
-  serviceSliderStartX = e.pageX - serviceSlider.offsetLeft;
-  serviceSliderScrollLeft = serviceSlider.scrollLeft;
-  serviceSlider.classList.add('grabbing', 'noselect');
-});
-
-serviceSlider.addEventListener('mouseleave', () => {
-  isServiceSliderActive = false;
-  serviceSlider.classList.remove('grabbing', 'noselect');
-});
-
-serviceSlider.addEventListener('mouseup', () => {
-  isServiceSliderActive = false;
-  serviceSlider.classList.remove('grabbing', 'noselect');
-});
-
-serviceSlider.addEventListener('mousemove', (e) => {
-  if (!isServiceSliderActive) return;
-  e.preventDefault();
-  const x = e.pageX - serviceSlider.offsetLeft;
-  const walk = (x - serviceSliderStartX) * 2;
-  serviceSlider.scrollLeft = serviceSliderScrollLeft - walk;
-});
-
-// БургерМеню========================================================
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const burgerBtn = document.querySelector('.burger');
-  const burgerMenu = document.getElementById('burgerMenu');
-  const closeBtn = document.querySelector('.burger-close');
-  const body = document.body;
-  
-  // Получаем все ссылки внутри меню
-  const menuLinks = document.querySelectorAll('.burger-link, .burger-phone, .social-link');
-  
-  // Функция открытия меню
-  function openMenu() {
-    burgerMenu.classList.add('active');
-    body.style.overflow = 'hidden';
-  }
-  
-  // Функция закрытия меню
-  function closeMenu() {
-    burgerMenu.classList.remove('active');
-    body.style.overflow = '';
-  }
-  
-  // Открытие меню
-  burgerBtn.addEventListener('click', openMenu);
-  
-  // Закрытие меню
-  closeBtn.addEventListener('click', closeMenu);
-  
-  // Закрытие при клике на ссылки меню
-  menuLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-  
-  // Закрытие при клике вне меню
-  document.addEventListener('click', function(e) {
-    if (!burgerMenu.contains(e.target) && 
-        e.target !== burgerBtn && 
-        !burgerBtn.contains(e.target)) {
-      closeMenu();
-    }
-  });
-  
-  // Закрытие по Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      closeMenu();
-    }
-  });
-});
-
-
-// скрытие скрола в футере
-document.addEventListener('DOMContentLoaded', function() {
-  const socialsBlock = document.querySelector('.socials-sticky');
-  const footer = document.querySelector('footer');
-  
-  if (!socialsBlock || !footer) return;
-
-  function handleScroll() {
-    const footerRect = footer.getBoundingClientRect();
-    const socialsHeight = socialsBlock.offsetHeight;
-    const triggerPoint = window.innerHeight - socialsHeight - 20; // 20px отступ
-    
-    // Если верх футера выше точки срабатывания (зашли в футер)
-    if (footerRect.top < triggerPoint) {
-      socialsBlock.style.opacity = '0';
-      socialsBlock.style.pointerEvents = 'none';
-      socialsBlock.style.transition = 'opacity 0.3s ease';
-    } else {
-      socialsBlock.style.opacity = '1';
-      socialsBlock.style.pointerEvents = 'auto';
-    }
-  }
-
-  // Оптимизация производительности
-  let isTicking = false;
-  window.addEventListener('scroll', function() {
-    if (!isTicking) {
-      window.requestAnimationFrame(function() {
-        handleScroll();
-        isTicking = false;
+document.addEventListener("DOMContentLoaded", function () {
+  // ── FAQ accordion ─────────────────────────────────────────────────────
+  const faqItems = document.querySelectorAll(".faq .faq-item");
+  faqItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      faqItems.forEach((el) => {
+        if (el !== item) el.classList.remove("active");
       });
-      isTicking = true;
+      item.classList.toggle("active");
+    });
+  });
+
+  // ── Drag-to-scroll ────────────────────────────────────────────────────
+  function makeDraggable(el) {
+    let active = false;
+    let startX, startScrollLeft, cachedOffsetLeft;
+
+    el.addEventListener("mousedown", (e) => {
+      active = true;
+      cachedOffsetLeft = el.offsetLeft;
+      startX = e.pageX - cachedOffsetLeft;
+      startScrollLeft = el.scrollLeft;
+      el.classList.add("grabbing", "noselect");
+    });
+
+    el.addEventListener("mouseleave", () => {
+      active = false;
+      el.classList.remove("grabbing", "noselect");
+    });
+
+    el.addEventListener("mouseup", () => {
+      active = false;
+      el.classList.remove("grabbing", "noselect");
+    });
+
+    el.addEventListener("mousemove", (e) => {
+      if (!active) return;
+      e.preventDefault();
+      const x = e.pageX - cachedOffsetLeft;
+      el.scrollLeft = startScrollLeft - (x - startX) * 2;
+    });
+  }
+
+  const carousel = document.querySelector(".testimonials-carousel");
+  if (carousel) makeDraggable(carousel);
+
+  const serviceSlider = document.querySelector(".services-slider");
+  if (serviceSlider) makeDraggable(serviceSlider);
+
+  // ── Burger menu ───────────────────────────────────────────────────────
+  const burgerBtn = document.querySelector(".burger");
+  const burgerMenu = document.getElementById("burgerMenu");
+  const closeBtn = document.querySelector(".burger-close");
+  const menuLinks = document.querySelectorAll(".burger-link, .burger-phone, .social-link");
+
+  function openMenu() {
+    burgerMenu.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    burgerMenu.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  burgerBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+  document.addEventListener("click", function (e) {
+    if (!burgerMenu.contains(e.target) && e.target !== burgerBtn && !burgerBtn.contains(e.target)) {
+      closeMenu();
     }
   });
 
-  // Инициализация при загрузке
-  handleScroll();
-});
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
+  });
 
+  // ── Sticky socials: hide when scrolled into footer ────────────────────
+  const socialsBlock = document.querySelector(".socials-sticky");
+  const footer = document.querySelector("footer");
+
+  if (socialsBlock && footer) {
+    socialsBlock.style.transition = "opacity 0.3s ease";
+    const socialsHeight = socialsBlock.offsetHeight;
+
+    function handleScroll() {
+      const footerTop = footer.getBoundingClientRect().top;
+      const triggerPoint = window.innerHeight - socialsHeight - 20;
+      const hidden = footerTop < triggerPoint;
+      socialsBlock.style.opacity = hidden ? "0" : "1";
+      socialsBlock.style.pointerEvents = hidden ? "none" : "auto";
+    }
+
+    let isTicking = false;
+    window.addEventListener("scroll", function () {
+      if (!isTicking) {
+        window.requestAnimationFrame(function () {
+          handleScroll();
+          isTicking = false;
+        });
+        isTicking = true;
+      }
+    });
+
+    handleScroll();
+  }
+});

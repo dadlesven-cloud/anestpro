@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Разрешаем индексацию всех страниц
+Allow: /index.html
+Allow: /css/
+Allow: /images/
+Allow: /assets/
+
+# Запрещаем индексацию служебных файлов
+Disallow: /formscripts.js
+Disallow: /scripts.js
+Disallow: /site.webmanifest
+
+# Указываем расположение sitemap
+Sitemap: https://anestpro.org/sitemap.xml
+
+# Время задержки между запросами (в секундах)
+Crawl-delay: 1 
