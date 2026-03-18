@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const slides = track.querySelectorAll(".team-slide");
     const total = slides.length;
     let current = 0;
+    const progressBar = document.getElementById("teamProgressBar");
 
     function getSlidesPerView() {
       if (window.innerWidth < 768) return 1;
@@ -24,6 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
       track.style.transform = `translateX(-${current * slideWidth}px)`;
       prevBtn.disabled = current === 0;
       nextBtn.disabled = current >= maxIndex;
+      if (progressBar) {
+        const progress = maxIndex > 0 ? (current / maxIndex) * 100 : 100;
+        progressBar.style.width = progress + "%";
+      }
     }
 
     prevBtn.addEventListener("click", () => { current--; updateSlider(); });
