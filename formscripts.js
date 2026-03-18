@@ -198,4 +198,110 @@ document.addEventListener("DOMContentLoaded", function () {
     setupInputValidation(mainForm);
     mainForm.setAttribute("novalidate", true);
   }
+
+  // ── Book modal ────────────────────────────────────────────────────────
+
+  const bookOverlay = document.getElementById("bookModalOverlay");
+  const bookForm = document.getElementById("bookOrderForm");
+  const openBookBtn = document.getElementById("openBookModal");
+  const bookCloseBtn = document.querySelector(".book-modal-close");
+  const bookSuccess = document.getElementById("bookSuccessMessage");
+
+  function openBookModal() {
+    bookOverlay.classList.add("active");
+    document.addEventListener("keydown", handleBookEsc);
+  }
+
+  function closeBookModal() {
+    bookOverlay.classList.remove("active");
+    document.removeEventListener("keydown", handleBookEsc);
+    if (bookForm) {
+      bookForm.reset();
+      bookForm.style.display = "";
+      bookForm.querySelectorAll(".error-message").forEach((el) => (el.style.display = "none"));
+      bookForm.querySelectorAll(".modal-input").forEach((el) => el.classList.remove("error"));
+    }
+    if (bookSuccess) bookSuccess.style.display = "none";
+  }
+
+  function handleBookEsc(e) {
+    if (e.key === "Escape") closeBookModal();
+  }
+
+  if (openBookBtn) openBookBtn.addEventListener("click", openBookModal);
+  if (bookCloseBtn) bookCloseBtn.addEventListener("click", closeBookModal);
+  if (bookOverlay) {
+    bookOverlay.addEventListener("click", (e) => {
+      if (e.target === bookOverlay) closeBookModal();
+    });
+  }
+
+  if (bookForm) {
+    bookForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const nameInput = bookForm.querySelector('[name="name"]');
+      const phoneInput = bookForm.querySelector('[name="phone"]');
+      const cityInput = bookForm.querySelector('[name="city"]');
+      const branchInput = bookForm.querySelector('[name="branch"]');
+      const emailInput = bookForm.querySelector('[name="email"]');
+
+      bookForm.querySelectorAll(".error-message").forEach((el) => (el.style.display = "none"));
+      bookForm.querySelectorAll(".modal-input").forEach((el) => el.classList.remove("error"));
+
+      let isValid = true;
+      if (!nameInput.value.trim()) {
+        showFieldError(nameInput, bookForm.querySelector(".name-error"), "Будь ласка, введіть ваше ім'я");
+        isValid = false;
+      }
+      if (!phoneInput.value.trim() || !validatePhone(phoneInput.value)) {
+        showFieldError(phoneInput, bookForm.querySelector(".phone-error"), "Будь ласка, введіть коректний телефон");
+        isValid = false;
+      }
+      if (!cityInput.value.trim()) {
+        showFieldError(cityInput, bookForm.querySelector(".city-error"), "Будь ласка, введіть ваше місто");
+        isValid = false;
+      }
+      if (!branchInput.value.trim()) {
+        showFieldError(branchInput, bookForm.querySelector(".branch-error"), "Будь ласка, введіть номер відділення");
+        isValid = false;
+      }
+      if (!isValid) return;
+
+      const submitBtn = bookForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "<span>Відправка...</span>";
+
+      const message =
+        `📦 Замовлення книги\n` +
+        (emailInput.value ? `Email: ${emailInput.value.trim()}\n` : "") +
+        `Місто: ${cityInput.value.trim()}\n` +
+        `Відділення НП: №${branchInput.value.trim()}`;
+
+      try {
+        const res = await fetch("/api/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: nameInput.value.trim(),
+            phone: phoneInput.value.trim(),
+            message,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok || data.error) throw new Error(data.error || "Помилка сервера");
+
+        bookForm.style.display = "none";
+        if (bookSuccess) bookSuccess.style.display = "block";
+      } catch (err) {
+        alert("Помилка: " + err.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    });
+
+    setupInputValidation(bookForm);
+  }
 });

@@ -53,6 +53,40 @@
             <img src="images/LogotypeSVG.svg" alt="AnestPro Logo" />
           </a>
         </div>
+        <div class="header-socials">
+          <a
+            href="https://www.instagram.com/anestpro.ua?igsh=MWczYjF4cXAzeTM1MQ%3D%3D&utm_source=qr"
+            class="social-link"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon" width="22" height="22" fill="#006C83">
+              <use xlink:href="images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+          <a href="https://t.me/Glib_Ovsienko" class="social-link" aria-label="Telegram" target="_blank" rel="noopener">
+            <svg class="icon" width="22" height="22" fill="#006C83">
+              <use xlink:href="images/icons.svg#icon-telegram"></use>
+            </svg>
+          </a>
+          <a
+            href="viber://add?number=380689648251"
+            class="social-link"
+            aria-label="Viber"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon" width="22" height="22" fill="#006C83">
+              <use xlink:href="images/icons.svg#icon-viber"></use>
+            </svg>
+          </a>
+          <a href="https://wa.me/380689648251" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg class="icon" width="22" height="22" fill="#006C83">
+              <use xlink:href="images/icons.svg#icon-whatsapp"></use>
+            </svg>
+          </a>
+        </div>
         <div class="menu-block">
           <span class="menu-text">Меню</span>
           <button class="burger" aria-label="Меню">
@@ -419,33 +453,200 @@
       </section>
 
       <section id="team" class="team-section">
-        <div class="team-container">
-          <!-- Блок с текстом -->
+        <div class="team-slider-section">
+          <button class="team-arrow team-arrow-prev" aria-label="Попереднє">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 18l-6-6 6-6"
+                stroke="white"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <div class="team-track-container">
+            <div class="team-track" id="teamTrack">
+              <div class="team-slide">
+                <div class="team-slide-img-wrap">
+                  <img src="images/teams/P1420022.JPG" alt="Марченко Олена — Сестра медична-анестезист AnestPro" loading="lazy" />
+                </div>
+                <div class="team-slide-info">
+                  <p class="team-member-name">Марченко Олена</p>
+                  <div class="team-member-role-row">
+                    <img src="images/assets/icons8-down-right-24.png" class="team-role-arrow" alt="" />
+                    <span class="team-member-role-badge">Сестра медична-анестезист</span>
+                  </div>
+                  <p class="team-member-experience">Досвід роботи 25 років</p>
+                  <p class="team-member-direction-title">Напрям роботи:</p>
+                  <ul class="team-member-checklist">
+                    <li>робота з дорослими та дітьми</li>
+                  </ul>
+                  <blockquote class="team-member-quote">
+                    <p>У цій професії поєднуються знання, швидкість мислення та велика відповідальність перед пацієнтом</p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="team-slide">
+                <div class="team-slide-img-wrap">
+                  <img
+                    src="images/teams/P1410673.JPG"
+                    alt="Овсієнко Гліб — Лікар-анестезіолог AnestPro"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="team-slide-info">
+                  <p class="team-member-name">Овсієнко Гліб</p>
+                  <div class="team-member-role-row">
+                    <img src="images/assets/icons8-down-right-24.png" class="team-role-arrow" alt="" />
+                    <span class="team-member-role-badge">Лікар-анестезіолог</span>
+                  </div>
+                  <p class="team-member-direction-title">Напрям роботи:</p>
+                  <ul class="team-member-checklist">
+                    <li>дентальна анестезіологія</li>
+                    <li>хірургія широкого спектру</li>
+                  </ul>
+                  <p class="team-member-experience">Досвід роботи більше 10 років</p>
+                  <p class="team-member-owner">Власник «Анестезіологічна служба AnestPro»</p>
+                </div>
+              </div>
+
+              <div class="team-slide">
+                <div class="team-slide-img-wrap">
+                  <img
+                    src="images/teams/P1410757.JPG"
+                    alt="Сажин Дмитро — Лікар-анестезіолог AnestPro"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="team-slide-info">
+                  <p class="team-member-name">Сажин Дмитро</p>
+                  <div class="team-member-role-row">
+                    <img src="images/assets/icons8-down-right-24.png" class="team-role-arrow" alt="" />
+                    <span class="team-member-role-badge">Лікар-анестезіолог</span>
+                  </div>
+                  <p class="team-member-experience">Досвід роботи 8 років</p>
+                  <p class="team-member-direction-title">Напрям роботи:</p>
+                  <ul class="team-member-checklist">
+                    <li>загальна анестезіологія</li>
+                    <li>регіонарна анестезія та ультразвукова навігація</li>
+                    <li>періопераційна медицина</li>
+                    <li>анестезіологічне забезпечення реконструктивних та естетичних операцій</li>
+                    <li>освітні та симуляційні проєкти для лікарів</li>
+                  </ul>
+                  <blockquote class="team-member-quote">
+                    <p>
+                      Я обрав анестезіологію, тому що це спеціальність, де рішення потрібно приймати швидко,
+                      відповідально і на основі чіткої логіки. Тут поєднуються клінічне мислення, технічні навички та
+                      командна робота — і саме від цього часто залежить стабільність пацієнта
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="team-slide">
+                <div class="team-slide-img-wrap">
+                  <img src="images/teams/P1420085.JPG" alt="Клямар Юлія — Лікар-анестезіолог AnestPro" loading="lazy" />
+                </div>
+                <div class="team-slide-info">
+                  <p class="team-member-name">Клямар Юлія</p>
+                  <div class="team-member-role-row">
+                    <img src="images/assets/icons8-down-right-24.png" class="team-role-arrow" alt="" />
+                    <span class="team-member-role-badge">Лікар-анестезіолог</span>
+                  </div>
+                  <p class="team-member-experience">Досвід роботи 13 років</p>
+                  <p class="team-member-direction-title">Напрям роботи:</p>
+                  <ul class="team-member-checklist">
+                    <li>доросла анестезіологія</li>
+                    <li>дитяча анестезіологія</li>
+                  </ul>
+                  <blockquote class="team-member-quote">
+                    <p>Анестезіологія — це спеціальність, де важливі глибокі знання, уважність до деталей і швидкість прийняття рішень</p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="team-slide">
+                <div class="team-slide-img-wrap">
+                  <img src="images/teams/P1410837.JPG" alt="Член команди AnestPro" loading="lazy" />
+                </div>
+                <div class="team-slide-info">
+                  <h3 class="team-member-name"><!-- Ім'я Прізвище --></h3>
+                  <p class="team-member-role"><!-- Посада --></p>
+                  <p class="team-member-bio"><!-- Короткий опис --></p>
+                </div>
+              </div>
+
+              <div class="team-slide">
+                <div class="team-slide-img-wrap">
+                  <img src="images/teams/P1410818.JPG" alt="Член команди AnestPro" loading="lazy" />
+                </div>
+                <div class="team-slide-info">
+                  <h3 class="team-member-name"><!-- Ім'я Прізвище --></h3>
+                  <p class="team-member-role"><!-- Посада --></p>
+                  <p class="team-member-bio"><!-- Короткий опис --></p>
+                </div>
+              </div>
+
+              <div class="team-slide">
+                <div class="team-slide-img-wrap">
+                  <img src="images/teams/P1410692.JPG" alt="Ткачук Роман — Анестезист AnestPro" loading="lazy" />
+                </div>
+                <div class="team-slide-info">
+                  <p class="team-member-name">Ткачук Роман</p>
+                  <div class="team-member-role-row">
+                    <img src="images/assets/icons8-down-right-24.png" class="team-role-arrow" alt="" />
+                    <span class="team-member-role-badge">Анестезист</span>
+                  </div>
+                  <p class="team-member-experience">Досвід роботи 5 років</p>
+                  <p class="team-member-direction-title">Напрям роботи:</p>
+                  <ul class="team-member-checklist">
+                    <li>хірургія та інтенсивна терапія</li>
+                    <li>амбулаторна анестезія</li>
+                  </ul>
+                  <blockquote class="team-member-quote">
+                    <p>Одна з найкращих спеціальностей, де ти безпосередньо тут і зараз допомагаєш пацієнту</p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="team-slide">
+                <div class="team-slide-img-wrap">
+                  <img src="images/teams/P1410883.JPG" alt="Член команди AnestPro" loading="lazy" />
+                </div>
+                <div class="team-slide-info">
+                  <h3 class="team-member-name"><!-- Ім'я Прізвище --></h3>
+                  <p class="team-member-role"><!-- Посада --></p>
+                  <p class="team-member-bio"><!-- Короткий опис --></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="team-arrow team-arrow-next" aria-label="Наступне">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 18l6-6-6-6"
+                stroke="white"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="container">
           <div class="team-text-block">
-            <h2 class="team-title">Ми - команда професіоналів</h2>
+            <h2 class="team-title">Ми — команда<br />професіоналів</h2>
             <p class="team-description">
               Досвідчена команда анестезіологів для стоматологічних клінік і медичних установ.
             </p>
-            <svg width="162" height="2" viewBox="0 0 162 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="162" height="2" viewBox="0 0 162 2" fill="none">
               <path d="M1 1H81H161" stroke="#FAFAFA" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
             </svg>
-          </div>
-
-          <!-- Блок с фото и лого -->
-          <div class="team-image-block">
-            <div class="team-photo">
-              <img
-                src="images/phototeam1.png"
-                alt="Фото команди професіоналів AnestPro"
-                class="team-photo"
-                loading="lazy"
-              />
-            </div>
-            <div class="team-logo">
-              <a href="#hero" class="logo">
-                <img src="images/LogotypeSVG.svg" alt="AnestPro Logo" width="199" height="52" />
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -800,6 +1001,65 @@
         </div>
       </section>
 
+      <!-- Book ==================== -->
+      <section id="book" class="book">
+        <div class="container">
+          <div class="book-header">
+            <span class="book-label">Книга</span>
+            <h2 class="book-section-title">Знання, які<br />рятують</h2>
+            <p class="book-section-subtitle">Практичний посібник з анестезіології — для лікарів, які хочуть більше</p>
+          </div>
+
+          <div class="book-card">
+            <div class="book-cover-wrapper">
+              <div class="book-cover-img">
+                <span class="book-cover-text">AnestPro</span>
+              </div>
+              <div class="book-price-tag">890<br />грн</div>
+            </div>
+
+            <div class="book-details">
+              <div class="book-tags">
+                <span class="book-tag">Медицина</span>
+                <span class="book-tag">280 сторінок</span>
+                <span class="book-tag">2024</span>
+              </div>
+
+              <h3 class="book-name">Анестезіологія в стоматології:<br />практичний посібник</h3>
+
+              <p class="book-description">
+                <!-- Опис заповниш потім -->
+                Унікальне видання для практикуючих лікарів — детальний розбір протоколів, клінічні випадки та алгоритми
+                дій у нестандартних ситуаціях.
+              </p>
+
+              <ul class="book-features">
+                <li>Протоколи седації та наркозу</li>
+                <li>Клінічні розбори реальних випадків</li>
+                <li>Алгоритми дій при ускладненнях</li>
+                <li>Понад 100 схем і ілюстрацій</li>
+              </ul>
+
+              <blockquote class="book-review">
+                <p>
+                  <!-- Рецензія заповниш потім -->
+                  «Найкраще видання з анестезіології для стоматологів, яке я читав. Обов'язково до прочитання кожному
+                  анестезіологу.»
+                </p>
+                <footer>— Проф. Іван Коваленко, д.м.н., завідувач кафедри анестезіології</footer>
+              </blockquote>
+
+              <button class="cta-button book-buy-btn" id="openBookModal">
+                <span>Придбати книгу</span>
+                <svg class="btn-icon" width="33" height="32">
+                  <use href="images/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="contact">
         <div class="container contact-container">
           <div class="contact-content">
@@ -994,38 +1254,58 @@
       </div>
     </div>
 
-    <!-- Соцсети======================================= -->
+    <!-- Book modal ==================== -->
+    <div class="book-modal-overlay" id="bookModalOverlay">
+      <div class="book-modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title">Оформлення замовлення</h3>
+          <button class="modal-close-btn book-modal-close" aria-label="Закрити">
+            <svg class="icon icon-close" width="24" height="24">
+              <use href="images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-content">
+          <p class="modal-description">
+            Доставка Новою Поштою по всій Україні. Вартість доставки оплачується отримувачем.
+          </p>
+          <form class="modal-form" id="bookOrderForm" novalidate>
+            <div class="modal-form-group">
+              <input name="name" type="text" placeholder="Повне ім'я*" required class="modal-input name" />
+              <div class="error-message name-error">Будь ласка, введіть ваше ім'я</div>
 
-    <div class="socials-sticky">
-      <div class="socials-container">
-        <a
-          href="https://www.instagram.com/anestpro.ua?igsh=MWczYjF4cXAzeTM1MQ%3D%3D&utm_source=qr"
-          class="social-link"
-          aria-label="Instagram"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg class="icon" width="24" height="24" fill="#006C83">
-            <use xlink:href="images/icons.svg#icon-instagram"></use>
-          </svg>
-        </a>
-        <a href="https://t.me/Glib_Ovsienko" class="social-link" aria-label="Telegram" target="_blank" rel="noopener">
-          <svg class="icon" width="24" height="24" fill="#006C83">
-            <use xlink:href="images/icons.svg#icon-telegram"></use>
-          </svg>
-        </a>
-        <a href="viber://add?number=380689648251" class="social-link" aria-label="Viber" target="_blank" rel="noopener">
-          <svg class="icon" width="24" height="24" fill="#006C83">
-            <use xlink:href="images/icons.svg#icon-viber"></use>
-          </svg>
-        </a>
-        <a href="https://wa.me/380689648251" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
-          <svg class="icon" width="24" height="24" fill="#006C83">
-            <use xlink:href="images/icons.svg#icon-whatsapp"></use>
-          </svg>
-        </a>
+              <input name="phone" type="tel" placeholder="Телефон*" required class="modal-input phone" />
+              <div class="error-message phone-error">Будь ласка, введіть ваш телефон</div>
+
+              <input name="email" type="email" placeholder="Email" class="modal-input" />
+
+              <input name="city" type="text" placeholder="Місто / населений пункт*" required class="modal-input city" />
+              <div class="error-message city-error">Будь ласка, введіть ваше місто</div>
+
+              <input
+                name="branch"
+                type="text"
+                placeholder="Номер відділення Нової Пошти*"
+                required
+                class="modal-input branch"
+              />
+              <div class="error-message branch-error">Будь ласка, введіть номер відділення</div>
+
+              <button type="submit" class="modal-submit-btn">
+                <span>Оформити замовлення</span>
+                <svg class="modal-btn-icon btn-icon" width="33" height="32">
+                  <use href="images/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <div class="success-message" id="bookSuccessMessage">
+            Дякуємо! Ваше замовлення прийнято. Ми зв'яжемося з вами найближчим часом.
+          </div>
+        </div>
       </div>
     </div>
+
     <!-- Модалка==================== -->
 
     <!-- Модальное окно -->

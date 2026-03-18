@@ -633,35 +633,27 @@ body {
 
 /*=============================================*/
 
-.team-section {
-  background: #006c83;
-  width: 100%;
-  /* padding: 60px 0; */
+/* Header socials (mobile only) */
+.header-socials {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
-/* Контейнер 1440px */
-.team-container {
-  width: 1440px;
-  height: 736px;
-  position: relative;
-  margin: 0 auto;
+/* Team section */
+.team-section {
+  background: #052f3d;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow: hidden;
 }
 
-/* Блок с текстом */
 .team-text-block {
-  width: 522px;
-  height: 340px;
-  position: absolute;
-  left: 80px;
-  top: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
-/* Стили заголовка */
 .team-title {
   font-family: "Manrope", sans-serif;
   font-weight: 700;
@@ -669,57 +661,242 @@ body {
   line-height: 1.1;
   letter-spacing: -0.01em;
   color: #fff;
-  margin: 0 0 100px 0;
+  margin: 0 0 24px 0;
 }
 
-/* Стили описания */
 .team-description {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.22222;
-  color: #fafafa;
-  width: 308px;
-  margin: 0;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 380px;
+  margin: 0 0 20px 0;
 }
 
-/* Блок с фото и лого */
-.team-image-block {
-  position: absolute;
-  width: 864px;
-  height: 731px;
-  right: -70px;
-  top: 4px;
+/* Slider section */
+.team-slider-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 
-/* Фото команды */
-.team-photo {
+.team-track-container {
+  overflow-x: clip;
+  overflow-y: visible;
+  flex: 1;
+}
+
+.team-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Slide */
+.team-slide {
+  flex-shrink: 0;
+  width: calc(100% / 3);
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 32px;
+}
+
+.team-slide-img-wrap {
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3 / 4;
+}
+
+.team-slide-img-wrap img {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 1;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-/* Логотип */
-.team-logo {
-  position: absolute;
-  border-radius: 16px;
-  padding: 10px;
-  width: 251px;
-  height: 135px;
-  top: 85px;
-  right: 552px;
-  background: white;
-  display: flex; /* Включаем flex */
-  justify-content: center; /* Горизонтальное центрирование */
-  align-items: center;
+.team-slide:hover .team-slide-img-wrap img {
+  transform: scale(1.06);
 }
-.team-logo .logo img {
-  width: 230px; /* Растягиваем на весь блок */
-  height: auto; /* Сохраняем пропорции */
+
+/* Info card */
+.team-slide-info {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  right: 16px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 20px 24px;
+  box-shadow: 0 8px 28px rgba(0, 108, 131, 0.18);
+  transform: translateY(80%);
+  opacity: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.2, 0.64, 1),
+    opacity 0.3s ease;
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+.team-slide:hover .team-slide-info {
+  transform: translateY(30px);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.team-member-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  color: #006c83;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px 0;
+}
+
+.team-member-role-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.team-role-arrow {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  filter: invert(27%) sepia(71%) saturate(629%) hue-rotate(163deg) brightness(93%) contrast(101%);
+}
+
+.team-member-role-badge {
+  display: inline-block;
+  border: 2px solid #006c83;
+  border-radius: 99px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #006c83;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.team-member-direction-title {
+  font-size: 13px;
+  font-weight: 900;
+  color: #006c83;
+  margin: 0 0 8px 0;
+}
+
+.team-member-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.team-member-checklist li {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #006c83;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.team-member-checklist li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  background: rgba(0, 108, 131, 0.12)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l2.5 2.5L9 1' stroke='%23006c83' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center / 10px no-repeat;
+  border-radius: 3px;
+}
+
+.team-member-experience {
+  font-size: 13px;
+  font-weight: 700;
+  color: #006c83;
+  margin: 0 0 6px 0;
+}
+
+.team-member-experience::before {
+  content: "»\00a0";
+  color: #006c83;
+}
+
+.team-member-owner {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 700;
+  color: #006c83;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.team-member-quote {
+  position: relative;
+  border: 1.5px solid #006c83;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 0;
+}
+
+.team-member-quote::before {
+  content: "\201C\201C";
+  position: absolute;
+  top: -14px;
+  left: 10px;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  color: #006c83;
+  background: #fff;
+  padding: 0 3px;
+}
+
+.team-member-quote p {
+  font-size: 11px;
+  line-height: 1.55;
+  color: #006c83;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+/* Nav arrows */
+.team-arrow {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  margin: 0 16px;
+}
+
+.team-arrow:hover {
+  background: #00a1a1;
+  border-color: #00a1a1;
+}
+
+.team-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 /* testimonials======================================================= */
@@ -1059,8 +1236,12 @@ img.logos-item-small {
   margin-top: 0;
   padding-top: 0;
   border-top: 0 solid rgba(0, 0, 0, 0.1);
-  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease,
-    padding-top 0.3s ease, border-top-width 0.3s ease;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease,
+    padding-top 0.3s ease,
+    border-top-width 0.3s ease;
 }
 
 .faq .faq-answer p {
@@ -1237,6 +1418,254 @@ img.logos-item-small {
 
 .cta-button:disabled .btn-icon {
   transform: none !important;
+}
+
+/* Book ========================================= */
+
+.book {
+  padding: 210px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.book-label {
+  display: inline-block;
+  color: #00a1a1;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.book-section-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 1.1;
+  color: #252b42;
+  margin-bottom: 20px;
+}
+
+.book-section-subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #737373;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.book-card {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  background: #fafafa;
+  border-radius: 24px;
+  padding: 60px;
+  box-shadow: 0 4px 40px rgba(25, 22, 84, 0.08);
+}
+
+.book-cover-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.book-cover-img {
+  width: 300px;
+  height: 420px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #004f60 0%, #006c83 40%, #00a1a1 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 32px;
+  box-shadow:
+    12px 16px 40px rgba(0, 108, 131, 0.35),
+    -4px -4px 20px rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-cover-img::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.book-cover-img::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.book-cover-text {
+  position: relative;
+  z-index: 1;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.book-price-tag {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: #00a1a1;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 161, 161, 0.45);
+}
+
+.book-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.book-tag {
+  background: rgba(0, 108, 131, 0.08);
+  color: #006c83;
+  border-radius: 99px;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.book-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #252b42;
+  margin-bottom: 20px;
+}
+
+.book-description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #737373;
+  margin-bottom: 28px;
+}
+
+.book-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.book-features li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  color: #252b42;
+  font-weight: 500;
+}
+
+.book-features li::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #00a1a1
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='9' viewBox='0 0 12 9'%3E%3Cpath d='M1 4l3 3 7-7' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center / 12px no-repeat;
+}
+
+.book-review {
+  background: rgba(0, 108, 131, 0.05);
+  border-left: 4px solid #006c83;
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+  margin-bottom: 40px;
+}
+
+.book-review p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #252b42;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.book-review footer {
+  font-size: 14px;
+  color: #006c83;
+  font-weight: 700;
+}
+
+.book-buy-btn {
+  width: auto;
+}
+
+/* Book modal */
+
+.book-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.book-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.book-modal-container {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: 20px;
 }
 
 /* Contact====================================== */
@@ -1537,7 +1966,7 @@ img.logos-item-small {
 }
 
 .social-link {
-  color: #fff;
+  color: #00a1a1;
   font-size: 20px;
   text-decoration: none;
 }
@@ -1553,7 +1982,7 @@ img.logos-item-small {
   right: 2%;
   z-index: 100;
   transition: right 0.3s ease;
-  background: #006c83;
+  background: transparent;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -1805,6 +2234,34 @@ img.logos-item-small {
     padding: 0 20px;
   }
 
+  /* Team slider tablet */
+  .team-slide {
+    width: calc(100% / 2);
+  }
+
+  /* Book tablet */
+  .book {
+    padding: 80px 0;
+  }
+
+  .book-section-title {
+    font-size: 48px;
+  }
+
+  .book-card {
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .book-cover-img {
+    width: 240px;
+    height: 340px;
+  }
+
+  .book-name {
+    font-size: 28px;
+  }
+
   .logo {
     font-size: 24px;
   }
@@ -1894,32 +2351,6 @@ img.logos-item-small {
   .cards-container {
     grid-template-columns: 1fr 1fr;
   }
-  .team-container {
-    padding: 60px 20px;
-  }
-
-  .team-text-block {
-    position: static;
-    width: 100%;
-    height: auto;
-  }
-
-  .team-image-block {
-    width: 650px;
-    height: 600px;
-    top: 75px;
-    right: 0;
-  }
-  .team-photo {
-    top: 30px;
-    position: relative;
-  }
-  .team-logo {
-    width: 240px;
-    height: 104px;
-    top: 129px;
-    right: 250px;
-  }
 
   /* Отзывы */
 
@@ -1996,6 +2427,59 @@ img.logos-item-small {
   .container {
     padding: 0 20px 0 20px;
     width: 100%;
+  }
+
+  /* Book mobile */
+  .book {
+    padding: 80px 0;
+  }
+
+  .book-section-title {
+    font-size: 40px;
+  }
+
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  .book-cover-img {
+    width: 220px;
+    height: 310px;
+  }
+
+  .book-name {
+    font-size: 24px;
+  }
+
+  .book-buy-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hide header socials on tablet */
+  .header-socials {
+    display: none;
+  }
+
+  /* Hide fixed socials on mobile */
+  .socials-sticky {
+    display: none;
+  }
+
+  /* Team slider mobile */
+  .team-slide {
+    width: 85%;
+  }
+
+  .team-arrow {
+    display: none;
+  }
+
+  .team-title {
+    font-size: 36px;
   }
 
   .hero {
@@ -2327,99 +2811,8 @@ img.logos-item-small {
   }
 
   .team-section {
-    background: #006c83;
-    width: 100%;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .team-container {
-    width: 100%;
-    max-width: 390px;
-    height: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .team-text-block {
-    width: 100%;
-    position: static;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: auto;
-  }
-
-  .team-title {
-    font-family: "Manrope", sans-serif;
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    color: #fff;
-    margin-bottom: 40px;
-  }
-
-  .team-description {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    color: #fafafa;
-    width: 100%;
-    margin-bottom: 0;
-  }
-
-  .team-text-block svg {
-    display: none;
-  }
-
-  .team-image-block {
-    position: relative;
-    width: 100%;
-    max-width: 390px;
-    height: 312px;
-    border-radius: 16px;
-    overflow: hidden;
-    top: 39px;
-    right: 0px;
-  }
-  .team-photo {
-    width: 100%;
-    height: 100%;
-  }
-
-  .team-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .team-logo {
-    position: absolute;
-    left: 0;
-    top: 6px;
-    width: 127px;
-    height: 68px;
-    background: #fff;
-    border-radius: 12px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-  }
-
-  .team-logo .logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    background: #052f3d;
+    padding: 40px 0 0;
   }
 
   .testimonials {

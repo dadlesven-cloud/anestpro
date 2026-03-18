@@ -1,4 +1,50 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // ── Team slider ───────────────────────────────────────────────────────
+  const track = document.getElementById("teamTrack");
+  const prevBtn = document.querySelector(".team-arrow-prev");
+  const nextBtn = document.querySelector(".team-arrow-next");
+
+  if (track && prevBtn && nextBtn) {
+    const slides = track.querySelectorAll(".team-slide");
+    const total = slides.length;
+    let current = 0;
+
+    function getSlidesPerView() {
+      if (window.innerWidth < 768) return 1;
+      if (window.innerWidth < 1280) return 2;
+      return 3;
+    }
+
+    function updateSlider() {
+      const perView = getSlidesPerView();
+      const maxIndex = total - perView;
+      if (current > maxIndex) current = maxIndex;
+      if (current < 0) current = 0;
+      const slideWidth = slides[0].offsetWidth;
+      track.style.transform = `translateX(-${current * slideWidth}px)`;
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current >= maxIndex;
+    }
+
+    prevBtn.addEventListener("click", () => { current--; updateSlider(); });
+    nextBtn.addEventListener("click", () => { current++; updateSlider(); });
+
+    window.addEventListener("resize", updateSlider);
+    updateSlider();
+
+    // Touch swipe support
+    let startX = 0;
+    track.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener("touchend", (e) => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) { current++; } else { current--; }
+        updateSlider();
+      }
+    });
+
+  }
+
   // ── FAQ accordion ─────────────────────────────────────────────────────
   const faqItems = document.querySelectorAll(".faq .faq-item");
   faqItems.forEach((item) => {
