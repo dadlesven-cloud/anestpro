@@ -347,8 +347,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 414px;
-  /* margin-top: 20px; */
 }
 
 .services-text {
@@ -531,14 +529,14 @@ body {
 
 .why-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 124px;
+  align-items: flex-start;
+  gap: 80px;
   position: relative;
   z-index: 1;
 }
 
 .why-title {
+  flex-shrink: 0;
   font-family: "Manrope", sans-serif;
   font-weight: 700;
   font-size: 68px;
@@ -553,10 +551,7 @@ body {
   font-size: 16px;
   line-height: 1.375;
   letter-spacing: -0.01em;
-  color: #737373;
-  max-width: 414px;
-  margin-top: 16px;
-  /* margin-right: 108px; */
+  color: #252b42;
   margin-bottom: 0;
 }
 
@@ -723,16 +718,26 @@ body {
 }
 
 /* Info card */
+.team-slide-info::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(0, 108, 131, 0.22);
+  margin: 0 auto 14px;
+}
+
 .team-slide-info {
   position: absolute;
-  top: 50%;
+  bottom: 32px;
   left: 16px;
   right: 16px;
   background: #fff;
   border-radius: 12px;
-  padding: 20px 20px 24px;
+  padding: 16px 20px 24px;
   box-shadow: 0 8px 28px rgba(0, 108, 131, 0.18);
-  transform: translateY(80%);
+  transform: translateY(100%);
   opacity: 0;
   transition:
     transform 0.4s cubic-bezier(0.34, 1.2, 0.64, 1),
@@ -742,7 +747,7 @@ body {
 }
 
 .team-slide:hover .team-slide-info {
-  transform: translateY(30px);
+  transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
 }
@@ -943,7 +948,6 @@ body {
 }
 
 .services-desc {
-  width: 414px;
   padding-top: 20px;
 }
 
@@ -2353,12 +2357,12 @@ img.logos-item-small {
   /* Почему мы */
   .why-header {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     height: auto;
-    gap: 20px;
+    gap: 24px;
   }
   .why-desc {
-    width: 400px;
+    width: 100%;
   }
   .why-section {
     padding-top: 80px;
@@ -2489,12 +2493,28 @@ img.logos-item-small {
   /* Team slider mobile */
   .team-slide {
     width: 85%;
+    overflow: hidden;
+  }
+
+  /* Disable hover on mobile */
+  .team-slide:hover .team-slide-info {
+    transform: translateY(calc(100% - 68px));
+    opacity: 1;
   }
 
   .team-slide .team-slide-info {
-    transform: translateY(30px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 12px 12px 0 0;
+    transform: translateY(calc(100% - 68px));
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .team-slide.open .team-slide-info,
+  .team-slide.open:hover .team-slide-info {
+    transform: translateY(0);
   }
 
   .team-track {
@@ -2761,18 +2781,20 @@ img.logos-item-small {
 
   .why-header {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     height: auto;
-    gap: 20px;
+    gap: 24px;
   }
 
   .why-title {
     font-size: 44px;
     line-height: 1.1;
+    max-width: 100%;
   }
 
   .why-desc {
-    display: none;
+    display: block;
+    width: 100%;
   }
 
   .cards-container {

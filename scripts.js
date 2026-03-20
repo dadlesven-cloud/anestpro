@@ -39,13 +39,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Touch swipe support
     let startX = 0;
-    track.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    let wasSwiping = false;
+    track.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+      wasSwiping = false;
+    }, { passive: true });
     track.addEventListener("touchend", (e) => {
       const diff = startX - e.changedTouches[0].clientX;
       if (Math.abs(diff) > 50) {
+        wasSwiping = true;
         if (diff > 0) { current++; } else { current--; }
         updateSlider();
       }
+    });
+
+    // Mobile peek: tap to open/close info card
+    slides.forEach((slide) => {
+      slide.addEventListener("click", () => {
+        if (window.innerWidth >= 768) return;
+        if (wasSwiping) { wasSwiping = false; return; }
+        const isOpen = slide.classList.contains("open");
+        slides.forEach((s) => s.classList.remove("open"));
+        if (!isOpen) slide.classList.add("open");
+      });
     });
 
   }
