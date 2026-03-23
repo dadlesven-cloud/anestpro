@@ -112,7 +112,31 @@ document.addEventListener("DOMContentLoaded", function () {
   if (carousel) makeDraggable(carousel);
 
   const serviceSlider = document.querySelector(".services-slider");
-  if (serviceSlider) makeDraggable(serviceSlider);
+  if (serviceSlider) {
+    makeDraggable(serviceSlider);
+
+    // Auto-scroll every 1.5s
+    let autoScrollPaused = false;
+    setInterval(() => {
+      if (autoScrollPaused) return;
+      const card = serviceSlider.querySelector(".service-card");
+      if (!card) return;
+      const step = card.offsetWidth + 20; // card width + gap
+      const maxScroll = serviceSlider.scrollWidth - serviceSlider.clientWidth;
+      if (serviceSlider.scrollLeft >= maxScroll - 1) {
+        serviceSlider.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        serviceSlider.scrollBy({ left: step, behavior: "smooth" });
+      }
+    }, 1500);
+
+    serviceSlider.addEventListener("mouseenter", () => { autoScrollPaused = true; });
+    serviceSlider.addEventListener("mouseleave", () => { autoScrollPaused = false; });
+    serviceSlider.addEventListener("touchstart", () => { autoScrollPaused = true; }, { passive: true });
+    serviceSlider.addEventListener("touchend", () => {
+      setTimeout(() => { autoScrollPaused = false; }, 2000);
+    });
+  }
 
   // ── Burger menu ───────────────────────────────────────────────────────
   const burgerBtn = document.querySelector(".burger");

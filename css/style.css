@@ -1111,15 +1111,15 @@ body {
 }
 
 .logos-item img {
-  height: 60px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
 img.logos-item-small {
-  height: 60px !important;
-  width: 130px;
+  height: 80px !important;
+  width: 150px;
 }
 
 /* FAQ=================================================================== */
