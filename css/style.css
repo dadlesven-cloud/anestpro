@@ -719,7 +719,7 @@ body {
 
 /* Info card */
 .team-slide-info::before {
-  content: '';
+  content: "";
   display: block;
   width: 36px;
   height: 4px;
@@ -1094,7 +1094,7 @@ body {
 
 .logos-wrapper {
   background: #fafafa;
-  padding: 40px 0 !important;
+  padding: 40px 15px !important;
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
